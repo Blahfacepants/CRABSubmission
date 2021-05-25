@@ -1,0 +1,102 @@
+DEBUG 2021-05-18 16:23:56.648 UTC: 	 CRAB Client version: v3.210323
+DEBUG 2021-05-18 16:23:56.648 UTC: 	 Running on: Linux cmslpc107.fnal.gov 3.10.0-1160.21.1.el7.x86_64 #1 SMP Tue Mar 16 08:00:44 CDT 2021 x86_64 x86_64 x86_64 GNU/Linux - Scientific Linux 7.9 (Nitrogen)
+DEBUG 2021-05-18 16:23:56.648 UTC: 	 Executing command: 'tasks'
+DEBUG 2021-05-18 16:23:56.649 UTC: 	 Found CRAB cache file /uscms/home/adas2/.crab3
+DEBUG 2021-05-18 16:23:56.657 UTC: 	 Checking credentials
+DEBUG 2021-05-18 16:23:56.658 UTC: 	 Found proxy file /uscms/home/adas2/x509up_u56079
+DEBUG 2021-05-18 16:23:56.658 UTC: 	 Getting proxy life time left
+DEBUG 2021-05-18 16:23:56.761 UTC: 	 Executing : 
+ command : voms-proxy-info -file /uscms/home/adas2/x509up_u56079 -timeleft
+ output : 611766
+
+ error: 
+ retcode : 0
+DEBUG 2021-05-18 16:23:56.866 UTC: 	 Executing : 
+ command : voms-proxy-info -file /uscms/home/adas2/x509up_u56079 -actimeleft
+ output : 611766
+
+ error: 
+ retcode : 0
+DEBUG 2021-05-18 16:23:56.866 UTC: 	 Proxy valid for 169:56:06 hours
+DEBUG 2021-05-18 16:23:57.459 UTC: 	 Registering user credentials for server /DC=ch/DC=cern/OU=computers/CN=vocms0105.cern.ch|/DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod|dev)-tw(02|01).cern.ch|/DC=ch/DC=cern/OU=computers/CN=(ddi|ddidk|mytw).cern.ch|/DC=ch/DC=cern/OU=computers/CN=stefanov(m|m2).cern.ch
+DEBUG 2021-05-18 16:23:57.572 UTC: 	 Executing : 
+ command : voms-proxy-info -file /uscms/home/adas2/x509up_u56079 -identity
+ output : /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=ardas/CN=845460/CN=Archan Das
+
+ error: 
+ retcode : 0
+DEBUG 2021-05-18 16:23:57.579 UTC: 	 Getting myproxy life time left for myproxy.cern.ch
+DEBUG 2021-05-18 16:23:57.580 UTC: 	 using 72d5c825fb94b0149673ac71b8d91bbefac4ebde as credential login name
+DEBUG 2021-05-18 16:23:58.589 UTC: 	 Executing : 
+ command : myproxy-info -l 72d5c825fb94b0149673ac71b8d91bbefac4ebde -s myproxy.cern.ch
+ output : username: 72d5c825fb94b0149673ac71b8d91bbefac4ebde
+owner: /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=ardas/CN=845460/CN=Archan Das
+  renewal policy: /DC=ch/DC=cern/OU=computers/CN=vocms0105.cern.ch|/DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod|dev)-tw(02|01).cern.ch|/DC=ch/DC=cern/OU=computers/CN=(ddi|ddidk|mytw).cern.ch|/DC=ch/DC=cern/OU=computers/CN=stefanov(m|m2).cern.ch
+  trusted retrieval policy: /DC=ch/DC=cern/OU=computers/CN=vocms0105.cern.ch|/DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod|dev)-tw(02|01).cern.ch|/DC=ch/DC=cern/OU=computers/CN=(ddi|ddidk|mytw).cern.ch|/DC=ch/DC=cern/OU=computers/CN=stefanov(m|m2).cern.ch
+  timeleft: 381:47:44  (15.9 days)
+
+ error: 
+ retcode : 0
+DEBUG 2021-05-18 16:23:58.591 UTC: 	 Myproxy is valid: 1374464
+DEBUG 2021-05-18 16:23:58.591 UTC: 	 Retrieving username ...
+DEBUG 2021-05-18 16:23:58.591 UTC: 	 Retrieving username from CRIC...
+DEBUG 2021-05-18 16:23:59.974 UTC: 	 username is ardas
+DEBUG 2021-05-18 16:23:59.981 UTC: 	 Getting myproxy life time left for myproxy.cern.ch
+DEBUG 2021-05-18 16:23:59.981 UTC: 	 using ardas_CRAB as credential login name
+DEBUG 2021-05-18 16:24:00.885 UTC: 	 Executing : 
+ command : myproxy-info -l ardas_CRAB -s myproxy.cern.ch
+ output : username: ardas_CRAB
+owner: /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=ardas/CN=845460/CN=Archan Das
+  renewal policy: /DC=ch/DC=cern/OU=computers/CN=vocms0105.cern.ch|/DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod|dev)-tw(02|01).cern.ch|/DC=ch/DC=cern/OU=computers/CN=(ddi|ddidk|mytw).cern.ch|/DC=ch/DC=cern/OU=computers/CN=stefanov(m|m2).cern.ch
+  trusted retrieval policy: /DC=ch/DC=cern/OU=computers/CN=vocms0105.cern.ch|/DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod|dev)-tw(02|01).cern.ch|/DC=ch/DC=cern/OU=computers/CN=(ddi|ddidk|mytw).cern.ch|/DC=ch/DC=cern/OU=computers/CN=stefanov(m|m2).cern.ch
+  timeleft: 381:47:51  (15.9 days)
+
+ error: 
+ retcode : 0
+DEBUG 2021-05-18 16:24:00.886 UTC: 	 Myproxy is valid: 1374471
+DEBUG 2021-05-18 16:24:00.886 UTC: 	 Result of myproxy credential check:
+  Credential exists on myproxy: username: 72d5c825fb94b0149673ac71b8d91bbefac4ebde  - validity: 15 days, 21:47:44
+  Credential exists on myproxy: username: ardas_CRAB  - validity: 15 days, 21:47:51
+DEBUG 2021-05-18 16:24:00.886 UTC: 	 Command use: tasks
+DEBUG 2021-05-18 16:24:00.886 UTC: 	 Options use: []
+DEBUG 2021-05-18 16:24:01.515 UTC: 	 CRABClient version: v3.210323
+DEBUG 2021-05-18 16:24:01.515 UTC: 	 Instance is prod
+DEBUG 2021-05-18 16:24:01.515 UTC: 	 Server base url is cmsweb.cern.ch
+DEBUG 2021-05-18 16:24:01.515 UTC: 	 Command url /crabserver/prod/workflow
+INFO 2021-05-18 16:24:02.140 UTC: 	 
+List of tasks from 2021-04-18 until 2021-05-18
+INFO 2021-05-18 16:24:02.141 UTC: 	 Beware that STATUS here does not include information from grid jobs
+INFO 2021-05-18 16:24:02.141 UTC: 	 ================================================================================
+INFO 2021-05-18 16:24:02.141 UTC: 	 NAME								STATUS
+INFO 2021-05-18 16:24:02.141 UTC: 	 ================================================================================
+INFO 2021-05-18 16:24:02.141 UTC: 	 210518_142759:ardas_crab_GEN_Hpp_NEW_test
+								SUBMITTED
+INFO 2021-05-18 16:24:02.141 UTC: 	 --------------------------------------------------------------------------------
+INFO 2021-05-18 16:24:02.141 UTC: 	 210511_161134:ardas_crab_SIM_210511111111
+								SUBMITTED
+INFO 2021-05-18 16:24:02.141 UTC: 	 --------------------------------------------------------------------------------
+INFO 2021-05-18 16:24:02.141 UTC: 	 210504_142559:ardas_crab_GEN_Hpp_NEW_test
+								SUBMITTED
+INFO 2021-05-18 16:24:02.141 UTC: 	 --------------------------------------------------------------------------------
+INFO 2021-05-18 16:24:02.141 UTC: 	 
+
+INFO 2021-05-18 16:24:02.144 UTC: 	 Log file is /uscms_data/d3/adas2/pythia-stuff/EXO-MCsampleProductions/FullSimulation/RunIISummer20UL18/crab.log
+DEBUG 2021-05-18 16:24:33.790 UTC: 	 CRAB Client version: v3.210323
+DEBUG 2021-05-18 16:24:33.790 UTC: 	 Running on: Linux cmslpc107.fnal.gov 3.10.0-1160.21.1.el7.x86_64 #1 SMP Tue Mar 16 08:00:44 CDT 2021 x86_64 x86_64 x86_64 GNU/Linux - Scientific Linux 7.9 (Nitrogen)
+DEBUG 2021-05-18 16:24:33.790 UTC: 	 Executing command: 'status'
+DEBUG 2021-05-18 16:24:33.791 UTC: 	 Found CRAB cache file /uscms/home/adas2/.crab3
+ERROR 2021-05-18 16:24:33.793 UTC: 	 Error: 210511_161134:ardas_crab_SIM_210511111111 is not a valid CRAB project directory.
+ERROR 2021-05-18 16:24:33.793 UTC: 	 Caught ClientException exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.210323.00/bin/crab", line 165, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.210323.00/bin/crab", line 150, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.210323.00/lib/CRABClient/Commands/status.py", line 39, in __init__
+    SubCommand.__init__(self, logger, cmdargs)
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.210323.00/lib/CRABClient/Commands/SubCommand.py", line 270, in __init__
+    SubCommand.validateOptions(self)
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.210323.00/lib/CRABClient/Commands/SubCommand.py", line 639, in validateOptions
+    raise ConfigurationException(msg)
+ConfigurationException: [91mError[0m: 210511_161134:ardas_crab_SIM_210511111111 is not a valid CRAB project directory.
+INFO 2021-05-18 16:24:33.795 UTC: 	 Log file is /uscms_data/d3/adas2/pythia-stuff/EXO-MCsampleProductions/FullSimulation/RunIISummer20UL18/crab.log

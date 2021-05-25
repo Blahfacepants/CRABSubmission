@@ -1,0 +1,2 @@
+ALL_SUBSYSTEMS+=inputs
+subdirs_src_inputs = src_inputs_SIM_Hplusplus_M800_13TeV_test4 src_inputs_SIM_210518113034 src_inputs_SIM_210511111111

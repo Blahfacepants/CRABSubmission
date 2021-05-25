@@ -1,0 +1,2 @@
+ALL_PACKAGES += inputs/SIM_210511111111
+subdirs_src_inputs_SIM_210511111111 := 

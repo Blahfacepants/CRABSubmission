@@ -1,0 +1,2 @@
+ALL_PACKAGES += inputs/MiniAOD_Hplusplus_M800_13TeV_test4
+subdirs_src_inputs_MiniAOD_Hplusplus_M800_13TeV_test4 := 

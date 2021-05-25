@@ -1,0 +1,10 @@
+ALL_SUBSYSTEMS+=inputs
+subdirs_src_inputs = src_inputs_SIM_Hplusplus_M800_13TeV_test4 src_inputs_SIM_210518113034 src_inputs_SIM_210511111111
+ALL_PACKAGES += inputs/SIM_Hplusplus_M800_13TeV_test4
+subdirs_src_inputs_SIM_Hplusplus_M800_13TeV_test4 := 
+ALL_SUBSYSTEMS+=skeleton
+subdirs_src_skeleton = 
+ALL_PACKAGES += inputs/SIM_210511111111
+subdirs_src_inputs_SIM_210511111111 := 
+ALL_PACKAGES += inputs/SIM_210518113034
+subdirs_src_inputs_SIM_210518113034 := 

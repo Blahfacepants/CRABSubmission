@@ -1,0 +1,613 @@
+DEBUG 2021-03-09 15:26:54.491 UTC: 	 CRAB Client version: v3.201110
+DEBUG 2021-03-09 15:26:54.492 UTC: 	 Running on: Linux cmslpc141.fnal.gov 3.10.0-1160.6.1.el7.x86_64 #1 SMP Tue Nov 10 08:19:23 CST 2020 x86_64 x86_64 x86_64 GNU/Linux - Scientific Linux 7.9 (Nitrogen)
+DEBUG 2021-03-09 15:26:54.492 UTC: 	 Executing command: 'submit'
+DEBUG 2021-03-09 15:26:54.492 UTC: 	 Found CRAB cache file /uscms/home/adas2/.crab3
+INFO 2021-03-09 15:26:54.510 UTC: 	 Will use CRAB configuration file submit_crab.py
+DEBUG 2021-03-09 15:26:54.510 UTC: 	 Loading CRAB configuration file.
+DEBUG 2021-03-09 15:26:57.393 UTC: 	 Will use CRAB Analysis plugin (i.e. will run an analysis job type).
+DEBUG 2021-03-09 15:26:57.420 UTC: 	 Checking credentials
+DEBUG 2021-03-09 15:26:57.420 UTC: 	 Found proxy file /uscms/home/adas2/x509up_u56079
+DEBUG 2021-03-09 15:26:57.420 UTC: 	 Getting proxy life time left
+DEBUG 2021-03-09 15:26:57.524 UTC: 	 Executing : 
+ command : voms-proxy-info -file /uscms/home/adas2/x509up_u56079 -timeleft
+ output : 43115
+
+ error: 
+ retcode : 0
+DEBUG 2021-03-09 15:26:57.628 UTC: 	 Executing : 
+ command : voms-proxy-info -file /uscms/home/adas2/x509up_u56079 -actimeleft
+ output : 43115
+
+ error: 
+ retcode : 0
+DEBUG 2021-03-09 15:26:57.628 UTC: 	 Proxy valid for 11:58:35 hours
+DEBUG 2021-03-09 15:26:57.733 UTC: 	 Executing : 
+ command : env X509_USER_PROXY=/uscms/home/adas2/x509up_u56079 voms-proxy-info -fqan
+ output : /cms/Role=NULL/Capability=NULL
+
+ error: 
+ retcode : 0
+DEBUG 2021-03-09 15:26:58.327 UTC: 	 Registering user credentials for server /DC=ch/DC=cern/OU=computers/CN=vocms0105.cern.ch|/DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod|dev)-tw(02|01).cern.ch|/DC=ch/DC=cern/OU=computers/CN=(ddi|ddidk|mytw).cern.ch|/DC=ch/DC=cern/OU=computers/CN=stefanov(m|m2).cern.ch
+DEBUG 2021-03-09 15:26:58.437 UTC: 	 Executing : 
+ command : voms-proxy-info -file /uscms/home/adas2/x509up_u56079 -identity
+ output : /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=ardas/CN=845460/CN=Archan Das
+
+ error: 
+ retcode : 0
+DEBUG 2021-03-09 15:26:58.443 UTC: 	 Getting myproxy life time left for myproxy.cern.ch
+DEBUG 2021-03-09 15:26:58.443 UTC: 	 using 72d5c825fb94b0149673ac71b8d91bbefac4ebde as credential login name
+DEBUG 2021-03-09 15:26:59.449 UTC: 	 Executing : 
+ command : myproxy-info -l 72d5c825fb94b0149673ac71b8d91bbefac4ebde -s myproxy.cern.ch
+ output : username: 72d5c825fb94b0149673ac71b8d91bbefac4ebde
+owner: /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=ardas/CN=845460/CN=Archan Das
+  renewal policy: /DC=ch/DC=cern/OU=computers/CN=vocms0105.cern.ch|/DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod|dev)-tw(02|01).cern.ch|/DC=ch/DC=cern/OU=computers/CN=(ddi|ddidk|mytw).cern.ch|/DC=ch/DC=cern/OU=computers/CN=stefanov(m|m2).cern.ch
+  trusted retrieval policy: /DC=ch/DC=cern/OU=computers/CN=vocms0105.cern.ch|/DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod|dev)-tw(02|01).cern.ch|/DC=ch/DC=cern/OU=computers/CN=(ddi|ddidk|mytw).cern.ch|/DC=ch/DC=cern/OU=computers/CN=stefanov(m|m2).cern.ch
+  timeleft: 369:12:55  (15.4 days)
+
+ error: 
+ retcode : 0
+DEBUG 2021-03-09 15:26:59.450 UTC: 	 Myproxy is valid: 1329175
+DEBUG 2021-03-09 15:26:59.450 UTC: 	 Retrieving username ...
+DEBUG 2021-03-09 15:26:59.450 UTC: 	 Retrieving username from CRIC...
+DEBUG 2021-03-09 15:27:00.828 UTC: 	 username is ardas
+DEBUG 2021-03-09 15:27:00.834 UTC: 	 Getting myproxy life time left for myproxy.cern.ch
+DEBUG 2021-03-09 15:27:00.835 UTC: 	 using ardas_CRAB as credential login name
+DEBUG 2021-03-09 15:27:02.043 UTC: 	 Executing : 
+ command : myproxy-info -l ardas_CRAB -s myproxy.cern.ch
+ output : username: ardas_CRAB
+owner: /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=ardas/CN=845460/CN=Archan Das
+  renewal policy: /DC=ch/DC=cern/OU=computers/CN=vocms0105.cern.ch|/DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod|dev)-tw(02|01).cern.ch|/DC=ch/DC=cern/OU=computers/CN=(ddi|ddidk|mytw).cern.ch|/DC=ch/DC=cern/OU=computers/CN=stefanov(m|m2).cern.ch
+  trusted retrieval policy: /DC=ch/DC=cern/OU=computers/CN=vocms0105.cern.ch|/DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod|dev)-tw(02|01).cern.ch|/DC=ch/DC=cern/OU=computers/CN=(ddi|ddidk|mytw).cern.ch|/DC=ch/DC=cern/OU=computers/CN=stefanov(m|m2).cern.ch
+  timeleft: 369:13:03  (15.4 days)
+
+ error: 
+ retcode : 0
+DEBUG 2021-03-09 15:27:02.043 UTC: 	 Myproxy is valid: 1329183
+DEBUG 2021-03-09 15:27:02.043 UTC: 	 Result of myproxy credential check:
+  Credential exists on myproxy: username: 72d5c825fb94b0149673ac71b8d91bbefac4ebde  - validity: 15 days, 9:12:55
+  Credential exists on myproxy: username: ardas_CRAB  - validity: 15 days, 9:13:03
+DEBUG 2021-03-09 15:27:02.043 UTC: 	 Command use: submit
+DEBUG 2021-03-09 15:27:02.043 UTC: 	 Options use: ['-c', 'submit_crab.py']
+DEBUG 2021-03-09 15:27:02.614 UTC: 	 CRABClient version: v3.201110
+DEBUG 2021-03-09 15:27:02.614 UTC: 	 Instance is prod
+DEBUG 2021-03-09 15:27:02.614 UTC: 	 Server base url is cmsweb-k8s-prod.cern.ch
+DEBUG 2021-03-09 15:27:02.614 UTC: 	 Command url /crabserver/prod/workflow
+DEBUG 2021-03-09 15:27:02.614 UTC: 	 Started submission
+DEBUG 2021-03-09 15:27:02.614 UTC: 	 Working on /uscms_data/d3/adas2/pythia-stuff/EXO-MCsampleProductions/FullSimulation/RunIISummer20UL18/SIM__CMSSW_10_6_17_patch1/src/inputs/SIM_Hplusplus_M800_13TeV_test4/crab_projects/crab_SIM_Hplusplus_M800_13TeV_test4
+DEBUG 2021-03-09 15:27:03.343 UTC: 	 Loading required information from the environment
+DEBUG 2021-03-09 15:27:03.344 UTC: 	 Found CMSSW_10_6_17_patch1 for slc7_amd64_gcc700 with base /uscms_data/d3/adas2/pythia-stuff/EXO-MCsampleProductions/FullSimulation/RunIISummer20UL18/SIM__CMSSW_10_6_17_patch1
+DEBUG 2021-03-09 15:27:03.344 UTC: 	 Loading required information from the environment
+DEBUG 2021-03-09 15:27:03.344 UTC: 	 Found CMSSW_10_6_17_patch1 for slc7_amd64_gcc700 with base /uscms_data/d3/adas2/pythia-stuff/EXO-MCsampleProductions/FullSimulation/RunIISummer20UL18/SIM__CMSSW_10_6_17_patch1
+DEBUG 2021-03-09 15:27:03.344 UTC: 	 UNIQUE NAME: tarUUID 874ef853-8ea4-47cf-9e49-6fb402cbee30 
+DEBUG 2021-03-09 15:27:03.344 UTC: 	 self.config: from WMCore.Configuration import Configuration
+config = Configuration()
+config.section_('General')
+config.General.transferLogs = True
+config.General.transferOutputs = True
+config.General.workArea = 'crab_projects'
+config.General.requestName = 'SIM_Hplusplus_M800_13TeV_test4'
+config.section_('JobType')
+config.JobType.psetName = 'run_crab.py'
+config.JobType.pluginName = 'Analysis'
+config.JobType.numCores = 4
+config.JobType.maxMemoryMB = 4000
+config.section_('Data')
+config.Data.inputDataset = '/GEN_Hpp_NEW_test/ardas-RunIISummer20UL18_GEN-42b65214d01566d851ba74f16b93e2b1/USER'
+config.Data.outputDatasetTag = 'RunIISummer20UL18_SIM'
+config.Data.publication = True
+config.Data.unitsPerJob = 1
+config.Data.ignoreLocality = True
+config.Data.splitting = 'FileBased'
+config.Data.inputDBS = 'phys03'
+config.Data.outLFNDirBase = '/store/user/ardas/'
+config.section_('Site')
+config.Site.whitelist = ['T2_*', 'T3_*']
+config.Site.storageSite = 'T3_US_FNALLPC'
+config.section_('User')
+config.section_('Debug')
+
+DEBUG 2021-03-09 15:27:03.344 UTC: 	 self.config.JobType.psetName: run_crab.py
+INFO 2021-03-09 15:27:03.345 UTC: 	 Importing CMSSW configuration run_crab.py
+INFO 2021-03-09 15:27:06.059 UTC: 	 Finished importing CMSSW configuration run_crab.py
+INFO 2021-03-09 15:27:06.059 UTC: 	 You are requesting more than 1 core per job. Please make sure that your multi-threaded code is thread-safe and CPU-efficient, and request the correct amount of memory since the default 'maxMemoryMB' value is meant for single core jobs.
+DEBUG 2021-03-09 15:27:06.059 UTC: 	 Writing CMSSW configuration to /uscms_data/d3/adas2/pythia-stuff/EXO-MCsampleProductions/FullSimulation/RunIISummer20UL18/SIM__CMSSW_10_6_17_patch1/src/inputs/SIM_Hplusplus_M800_13TeV_test4/crab_projects/crab_SIM_Hplusplus_M800_13TeV_test4/inputs/PSet.py
+DEBUG 2021-03-09 15:27:06.583 UTC: 	 The following EDM output files will be collected: ['SIM.root']
+DEBUG 2021-03-09 15:27:06.583 UTC: 	 The following TFile output files will be collected: []
+DEBUG 2021-03-09 15:27:06.583 UTC: 	 The following user output files (not listed as PoolOuputModule or TFileService in the CMSSW PSet) will be collected: 
+DEBUG 2021-03-09 15:27:06.583 UTC: 	 Loading required information from the environment
+DEBUG 2021-03-09 15:27:06.583 UTC: 	 Found CMSSW_10_6_17_patch1 for slc7_amd64_gcc700 with base /uscms_data/d3/adas2/pythia-stuff/EXO-MCsampleProductions/FullSimulation/RunIISummer20UL18/SIM__CMSSW_10_6_17_patch1
+DEBUG 2021-03-09 15:27:06.583 UTC: 	 Making tarball in /uscms_data/d3/adas2/pythia-stuff/EXO-MCsampleProductions/FullSimulation/RunIISummer20UL18/SIM__CMSSW_10_6_17_patch1/src/inputs/SIM_Hplusplus_M800_13TeV_test4/crab_projects/crab_SIM_Hplusplus_M800_13TeV_test4/inputs/874ef853-8ea4-47cf-9e49-6fb402cbee30default.tgz
+DEBUG 2021-03-09 15:27:06.589 UTC: 	 Checking directory /uscms_data/d3/adas2/pythia-stuff/EXO-MCsampleProductions/FullSimulation/RunIISummer20UL18/SIM__CMSSW_10_6_17_patch1/lib
+DEBUG 2021-03-09 15:27:06.589 UTC: 	 Adding directory /uscms_data/d3/adas2/pythia-stuff/EXO-MCsampleProductions/FullSimulation/RunIISummer20UL18/SIM__CMSSW_10_6_17_patch1/lib to tarball
+DEBUG 2021-03-09 15:27:06.593 UTC: 	 Checking directory /uscms_data/d3/adas2/pythia-stuff/EXO-MCsampleProductions/FullSimulation/RunIISummer20UL18/SIM__CMSSW_10_6_17_patch1/biglib
+DEBUG 2021-03-09 15:27:06.593 UTC: 	 Adding directory /uscms_data/d3/adas2/pythia-stuff/EXO-MCsampleProductions/FullSimulation/RunIISummer20UL18/SIM__CMSSW_10_6_17_patch1/biglib to tarball
+DEBUG 2021-03-09 15:27:06.595 UTC: 	 Checking directory /uscms_data/d3/adas2/pythia-stuff/EXO-MCsampleProductions/FullSimulation/RunIISummer20UL18/SIM__CMSSW_10_6_17_patch1/module
+DEBUG 2021-03-09 15:27:06.813 UTC: 	 Uploading archive /uscms_data/d3/adas2/pythia-stuff/EXO-MCsampleProductions/FullSimulation/RunIISummer20UL18/SIM__CMSSW_10_6_17_patch1/src/inputs/SIM_Hplusplus_M800_13TeV_test4/crab_projects/crab_SIM_Hplusplus_M800_13TeV_test4/inputs/874ef853-8ea4-47cf-9e49-6fb402cbee30default.tgz (134 KB) to the CRAB cache. Using URI https://cmsweb.cern.ch:8443/crabcache
+DEBUG 2021-03-09 15:27:08.066 UTC: 	 Loading required information from the environment
+DEBUG 2021-03-09 15:27:08.066 UTC: 	 Found CMSSW_10_6_17_patch1 for slc7_amd64_gcc700 with base /uscms_data/d3/adas2/pythia-stuff/EXO-MCsampleProductions/FullSimulation/RunIISummer20UL18/SIM__CMSSW_10_6_17_patch1
+DEBUG 2021-03-09 15:27:08.066 UTC: 	 Making tarball in /uscms_data/d3/adas2/pythia-stuff/EXO-MCsampleProductions/FullSimulation/RunIISummer20UL18/SIM__CMSSW_10_6_17_patch1/src/inputs/SIM_Hplusplus_M800_13TeV_test4/crab_projects/crab_SIM_Hplusplus_M800_13TeV_test4/inputs/debugFiles.tgz
+DEBUG 2021-03-09 15:27:08.078 UTC: 	 Uploading archive /uscms_data/d3/adas2/pythia-stuff/EXO-MCsampleProductions/FullSimulation/RunIISummer20UL18/SIM__CMSSW_10_6_17_patch1/src/inputs/SIM_Hplusplus_M800_13TeV_test4/crab_projects/crab_SIM_Hplusplus_M800_13TeV_test4/inputs/debugFiles.tgz (2 KB) to the CRAB cache. Using URI https://cmsweb.cern.ch:8443/crabcache
+DEBUG 2021-03-09 15:27:08.802 UTC: 	 Result uploading input files: fb53c35d6c0193bac07889c3ca982bedc481ef263e4ee312073afb7780922e6d.tar.gz 
+INFO 2021-03-09 15:27:08.803 UTC: 	 Sending the request to the server at cmsweb-k8s-prod.cern.ch
+DEBUG 2021-03-09 15:27:08.803 UTC: 	 Submitting {'maxjobruntime': 1250, 'extrajdl': [], 'ignorelocality': 1, 'savelogsflag': 1, 'useparent': 0, 'asyncdest': 'T3_US_FNALLPC', 'algoargs': 1, 'cachefilename': 'fb53c35d6c0193bac07889c3ca982bedc481ef263e4ee312073afb7780922e6d.tar.gz', 'numcores': 4, 'addoutputfiles': [], 'generator': 'pythia', 'maxmemory': 4000, 'publishdbsurl': 'https://cmsweb.cern.ch/dbs/prod/phys03/DBSWriter', 'priority': 10, 'jobsw': 'CMSSW_10_6_17_patch1', 'edmoutfiles': ['SIM.root'], 'userfiles': [], 'primarydataset': '', 'inputdata': '/GEN_Hpp_NEW_test/ardas-RunIISummer20UL18_GEN-42b65214d01566d851ba74f16b93e2b1/USER', 'lfn': '/store/user/ardas/', 'dryrun': 0, 'workflow': 'crab_SIM_Hplusplus_M800_13TeV_test4', 'sitewhitelist': ['T2_*', 'T3_*'], 'nonprodsw': 0, 'tfileoutfiles': [], 'oneEventMode': 0, 'debugfilename': '979446cbbff9705eb4570a8bd9af36a67b0a5c07e53dd7934a09b5e701189849.tar.gz', 'cacheurl': u'https://cmsweb.cern.ch:8443/crabcache', 'saveoutput': 1, 'publication': 1, 'jobarch': 'slc7_amd64_gcc700', 'totalunits': 0, 'splitalgo': 'FileBased', 'ignoreglobalblacklist': 0, 'nonvaliddata': 0, 'dbsurl': 'https://cmsweb.cern.ch/dbs/prod/phys03/DBSReader', 'publishgroupname': 0, 'jobtype': 'Analysis', 'publishname2': 'RunIISummer20UL18_SIM'} 
+DEBUG 2021-03-09 15:27:08.803 UTC: 	 Encoded submit request: maxjobruntime=1250&ignorelocality=1&savelogsflag=1&useparent=0&asyncdest=T3_US_FNALLPC&algoargs=1&cachefilename=fb53c35d6c0193bac07889c3ca982bedc481ef263e4ee312073afb7780922e6d.tar.gz&numcores=4&generator=pythia&maxmemory=4000&publishdbsurl=https%3A%2F%2Fcmsweb.cern.ch%2Fdbs%2Fprod%2Fphys03%2FDBSWriter&priority=10&jobsw=CMSSW_10_6_17_patch1&primarydataset=&inputdata=%2FGEN_Hpp_NEW_test%2Fardas-RunIISummer20UL18_GEN-42b65214d01566d851ba74f16b93e2b1%2FUSER&lfn=%2Fstore%2Fuser%2Fardas%2F&dryrun=0&workflow=crab_SIM_Hplusplus_M800_13TeV_test4&nonprodsw=0&oneEventMode=0&debugfilename=979446cbbff9705eb4570a8bd9af36a67b0a5c07e53dd7934a09b5e701189849.tar.gz&cacheurl=https%3A%2F%2Fcmsweb.cern.ch%3A8443%2Fcrabcache&saveoutput=1&publication=1&jobarch=slc7_amd64_gcc700&totalunits=0&splitalgo=FileBased&ignoreglobalblacklist=0&nonvaliddata=0&dbsurl=https%3A%2F%2Fcmsweb.cern.ch%2Fdbs%2Fprod%2Fphys03%2FDBSReader&publishgroupname=0&jobtype=Analysis&publishname2=RunIISummer20UL18_SIM&sitewhitelist=T2_%2A&sitewhitelist=T3_%2A&edmoutfiles=SIM.root
+DEBUG 2021-03-09 15:27:09.593 UTC: 	 Result: {u'result': [{u'RequestName': u'210309_152709:ardas_crab_SIM_Hplusplus_M800_13TeV_test4'}]}
+INFO 2021-03-09 15:27:09.598 UTC: 	 Success: Your task has been delivered to the prod CRAB3 server.
+INFO 2021-03-09 15:27:09.598 UTC: 	 Task name: 210309_152709:ardas_crab_SIM_Hplusplus_M800_13TeV_test4
+INFO 2021-03-09 15:27:09.598 UTC: 	 Project dir: crab_projects/crab_SIM_Hplusplus_M800_13TeV_test4
+INFO 2021-03-09 15:27:09.598 UTC: 	 Please use ' crab status -d crab_projects/crab_SIM_Hplusplus_M800_13TeV_test4 ' to check how the submission process proceeds.
+DEBUG 2021-03-09 15:27:09.599 UTC: 	 About to return
+INFO 2021-03-09 15:27:09.602 UTC: 	 Log file is /uscms_data/d3/adas2/pythia-stuff/EXO-MCsampleProductions/FullSimulation/RunIISummer20UL18/SIM__CMSSW_10_6_17_patch1/src/inputs/SIM_Hplusplus_M800_13TeV_test4/crab_projects/crab_SIM_Hplusplus_M800_13TeV_test4/crab.log
+DEBUG 2021-03-09 15:28:16.798 UTC: 	 CRAB Client version: v3.201110
+DEBUG 2021-03-09 15:28:16.798 UTC: 	 Running on: Linux cmslpc141.fnal.gov 3.10.0-1160.6.1.el7.x86_64 #1 SMP Tue Nov 10 08:19:23 CST 2020 x86_64 x86_64 x86_64 GNU/Linux - Scientific Linux 7.9 (Nitrogen)
+DEBUG 2021-03-09 15:28:16.798 UTC: 	 Executing command: 'status'
+DEBUG 2021-03-09 15:28:16.798 UTC: 	 Found CRAB cache file /uscms/home/adas2/.crab3
+DEBUG 2021-03-09 15:28:16.831 UTC: 	 Checking credentials
+DEBUG 2021-03-09 15:28:16.832 UTC: 	 Found proxy file /uscms/home/adas2/x509up_u56079
+DEBUG 2021-03-09 15:28:16.832 UTC: 	 Getting proxy life time left
+DEBUG 2021-03-09 15:28:16.935 UTC: 	 Executing : 
+ command : voms-proxy-info -file /uscms/home/adas2/x509up_u56079 -timeleft
+ output : 43036
+
+ error: 
+ retcode : 0
+DEBUG 2021-03-09 15:28:17.039 UTC: 	 Executing : 
+ command : voms-proxy-info -file /uscms/home/adas2/x509up_u56079 -actimeleft
+ output : 43036
+
+ error: 
+ retcode : 0
+DEBUG 2021-03-09 15:28:17.039 UTC: 	 Proxy valid for 11:57:16 hours
+DEBUG 2021-03-09 15:28:17.607 UTC: 	 Registering user credentials for server /DC=ch/DC=cern/OU=computers/CN=vocms0105.cern.ch|/DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod|dev)-tw(02|01).cern.ch|/DC=ch/DC=cern/OU=computers/CN=(ddi|ddidk|mytw).cern.ch|/DC=ch/DC=cern/OU=computers/CN=stefanov(m|m2).cern.ch
+DEBUG 2021-03-09 15:28:17.718 UTC: 	 Executing : 
+ command : voms-proxy-info -file /uscms/home/adas2/x509up_u56079 -identity
+ output : /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=ardas/CN=845460/CN=Archan Das
+
+ error: 
+ retcode : 0
+DEBUG 2021-03-09 15:28:17.723 UTC: 	 Getting myproxy life time left for myproxy.cern.ch
+DEBUG 2021-03-09 15:28:17.724 UTC: 	 using 72d5c825fb94b0149673ac71b8d91bbefac4ebde as credential login name
+DEBUG 2021-03-09 15:28:18.730 UTC: 	 Executing : 
+ command : myproxy-info -l 72d5c825fb94b0149673ac71b8d91bbefac4ebde -s myproxy.cern.ch
+ output : username: 72d5c825fb94b0149673ac71b8d91bbefac4ebde
+owner: /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=ardas/CN=845460/CN=Archan Das
+  renewal policy: /DC=ch/DC=cern/OU=computers/CN=vocms0105.cern.ch|/DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod|dev)-tw(02|01).cern.ch|/DC=ch/DC=cern/OU=computers/CN=(ddi|ddidk|mytw).cern.ch|/DC=ch/DC=cern/OU=computers/CN=stefanov(m|m2).cern.ch
+  trusted retrieval policy: /DC=ch/DC=cern/OU=computers/CN=vocms0105.cern.ch|/DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod|dev)-tw(02|01).cern.ch|/DC=ch/DC=cern/OU=computers/CN=(ddi|ddidk|mytw).cern.ch|/DC=ch/DC=cern/OU=computers/CN=stefanov(m|m2).cern.ch
+  timeleft: 369:11:36  (15.4 days)
+
+ error: 
+ retcode : 0
+DEBUG 2021-03-09 15:28:18.731 UTC: 	 Myproxy is valid: 1329096
+DEBUG 2021-03-09 15:28:18.731 UTC: 	 Retrieving username ...
+DEBUG 2021-03-09 15:28:18.731 UTC: 	 Retrieving username from CRIC...
+DEBUG 2021-03-09 15:28:20.169 UTC: 	 username is ardas
+DEBUG 2021-03-09 15:28:20.176 UTC: 	 Getting myproxy life time left for myproxy.cern.ch
+DEBUG 2021-03-09 15:28:20.176 UTC: 	 using ardas_CRAB as credential login name
+DEBUG 2021-03-09 15:28:21.085 UTC: 	 Executing : 
+ command : myproxy-info -l ardas_CRAB -s myproxy.cern.ch
+ output : username: ardas_CRAB
+owner: /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=ardas/CN=845460/CN=Archan Das
+  renewal policy: /DC=ch/DC=cern/OU=computers/CN=vocms0105.cern.ch|/DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod|dev)-tw(02|01).cern.ch|/DC=ch/DC=cern/OU=computers/CN=(ddi|ddidk|mytw).cern.ch|/DC=ch/DC=cern/OU=computers/CN=stefanov(m|m2).cern.ch
+  trusted retrieval policy: /DC=ch/DC=cern/OU=computers/CN=vocms0105.cern.ch|/DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod|dev)-tw(02|01).cern.ch|/DC=ch/DC=cern/OU=computers/CN=(ddi|ddidk|mytw).cern.ch|/DC=ch/DC=cern/OU=computers/CN=stefanov(m|m2).cern.ch
+  timeleft: 369:11:44  (15.4 days)
+
+ error: 
+ retcode : 0
+DEBUG 2021-03-09 15:28:21.086 UTC: 	 Myproxy is valid: 1329104
+DEBUG 2021-03-09 15:28:21.086 UTC: 	 Result of myproxy credential check:
+  Credential exists on myproxy: username: 72d5c825fb94b0149673ac71b8d91bbefac4ebde  - validity: 15 days, 9:11:36
+  Credential exists on myproxy: username: ardas_CRAB  - validity: 15 days, 9:11:44
+DEBUG 2021-03-09 15:28:21.087 UTC: 	 Command use: status
+DEBUG 2021-03-09 15:28:21.087 UTC: 	 Options use: []
+DEBUG 2021-03-09 15:28:21.675 UTC: 	 CRABClient version: v3.201110
+DEBUG 2021-03-09 15:28:21.675 UTC: 	 Instance is prod
+DEBUG 2021-03-09 15:28:21.675 UTC: 	 Server base url is cmsweb-k8s-prod.cern.ch
+DEBUG 2021-03-09 15:28:21.675 UTC: 	 Command url /crabserver/prod/workflow
+DEBUG 2021-03-09 15:28:22.315 UTC: 	 Got information from server oracle database: {u'result': [u'210309_152709:ardas_crab_SIM_Hplusplus_M800_13TeV_test4', u'None', u'None', u'SUBMITTED', u'SUBMIT', u'2021-03-09 15:27:09.534070', u'None', u'2021-03-09 15:27:50.743279', u'None', u'CMSSW_10_6_17_patch1', u'slc7_amd64_gcc700', u'/GEN_Hpp_NEW_test/ardas-RunIISummer20UL18_GEN-42b65214d01566d851ba74f16b93e2b1/USER', u'F', u'0', u"['T3_US_PuertoRico', 'T3_RU_MEPhI', 'T2_FI_HIP', 'T2_UK_SGrid_RALPP', 'T2_FR_GRIF_LLR', 'T3_US_Baylor', 'T3_UK_London_QMUL', 'T3_TW_NTU_HEP', 'T2_RU_SINP', 'T3_US_UMD', 'T3_US_Colorado', 'T3_US_Kansas', 'T3_GR_IASA', 'T2_IT_Bari', 'T2_US_UCSD', 'T2_RU_IHEP', 'T3_US_JHU', 'T3_BY_NCPHEP', 'T2_US_Vanderbilt', 'T3_US_UCR', 'T3_TW_NCU', 'T2_CH_CSCS', 'T2_UA_KIPT', 'T2_PK_NCP', 'T3_KR_KNU', 'T2_FR_IPHC', 'T3_US_OSU', 'T3_US_TAMU', 'T2_IT_Rome', 'T2_UK_London_Brunel', 'T3_IN_PUHEP', 'T3_US_OSG', 'T3_IT_Trieste', 'T2_EE_Estonia', 'T2_IN_TIFR', 'T2_CN_Beijing', 'T2_US_Florida', 'T3_US_Princeton_ICSE', 'T3_IT_MIB', 'T3_US_PSC', 'T3_US_Rutgers', 'T2_US_Wisconsin', 'T2_HU_Budapest', 'T2_DE_RWTH', 'T2_BR_SPRACE', 'T3_UK_SGrid_Oxford', 'T3_US_TACC', 'T2_CH_CERN', 'T2_BR_UERJ', 'T3_MX_Cinvestav', 'T3_US_FNALLPC', 'T3_RU_FIAN', 'T3_CH_CERN_DOMA', 'T2_ES_IFCA', 'T3_ES_Oviedo', 'T3_US_NotreDame', 'T2_DE_DESY', 'T3_HU_Debrecen', 'T2_US_Caltech', 'T3_US_VC3_NotreDame', 'T3_FR_IPNL', 'T3_BG_UNI_SOFIA', 'T3_UK_London_RHUL', 'T3_IN_TIFRCloud', 'T3_CN_PKU', 'T2_UK_London_IC', 'T2_US_Nebraska', 'T2_ES_CIEMAT', 'T3_UK_ScotGrid_GLA', 'T2_KR_KISTI', 'T3_KR_UOS', 'T3_IT_Perugia', 'T2_TR_METU', 'T2_AT_Vienna', 'T2_US_Purdue', 'T3_US_Rice', 'T2_TW_NCHC', 'T2_BE_UCL', 'T3_US_FIT', 'T2_UK_SGrid_Bristol', 'T2_PT_NCG_Lisbon', 'T3_US_UMiss', 'T2_IT_Legnaro', 'T2_RU_ITEP', 'T3_US_SDSC', 'T2_RU_JINR', 'T2_IT_Pisa', 'T2_GR_Ioannina', 'T3_US_MIT', 'T2_CH_CERN_HLT', 'T2_FR_GRIF_IRFU', 'T3_US_NERSC', 'T2_FR_CCIN2P3', 'T2_US_MIT', 'T2_BE_IIHE', 'T2_RU_INR', 'T2_PL_Swierk', 'T3_CH_PSI', 'T3_IT_Bologna']", u'[]', u'FileBased', u"{'splitOnRun': False, 'halt_job_on_file_boundaries': False, 'files_per_job': 1, 'runs': [], 'lumis': []}", u'fb53c35d6c0193bac07889c3ca982bedc481ef263e4ee312073afb7780922e6d.tar.gz', u'https://cmsweb.cern.ch:8443/crabcache', u'ardas', u'/DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=ardas/CN=845460/CN=Archan Das', u'cms', u'None', u'None', u'RunIISummer20UL18_SIM-00000000000000000000000000000000', u'F', u'T3_US_FNALLPC', u'https://cmsweb.cern.ch/dbs/prod/phys03/DBSReader', u'https://cmsweb.cern.ch/dbs/prod/phys03/DBSWriter', u'T', u'[]', u'[]', u"['SIM.root']", u'Analysis', u'pythia', u'None', u'{}', u'[]', u'T', u'crab-prod-tw01', u'[]', u'1250', u'4', u'4000', u'10', u'None', u'["The following sites from the user site whitelist are blacklisted by the CRAB server: [u\'T2_BR_UERJ\', u\'T3_US_UCR\', u\'T3_US_FNALLPC\', u\'T3_FR_IPNL\', u\'T3_CN_PKU\', u\'T3_RU_FIAN\', u\'T3_US_PSC\', u\'T3_US_UMiss\', u\'T3_US_NotreDame\', u\'T2_RU_SINP\', u\'T3_US_SDSC\', u\'T3_IN_PUHEP\', u\'T3_US_OSG\', u\'T2_GR_Ioannina\', u\'T3_US_MIT\', u\'T2_CH_CERN_HLT\', u\'T3_US_Kansas\', u\'T3_US_Princeton_ICSE\', u\'T3_US_NERSC\', u\'T3_GR_IASA\', u\'T3_TW_NTU_HEP\', u\'T3_US_Rutgers\', u\'T3_IT_MIB\', u\'T2_RU_ITEP\', u\'T3_US_JHU\', u\'T3_BY_NCPHEP\', u\'T3_US_TACC\', u\'T3_KR_UOS\', u\'T3_CH_PSI\', u\'T3_IN_TIFRCloud\']. Since the CRAB server blacklist has precedence, these sites are not considered in the user whitelist."]', u'http://vocms0196.cern.ch/mon/cms009/210309_152709:ardas_crab_SIM_Hplusplus_M800_13TeV_test4', u'None', u'[]', u'[]', u'https://cmsweb.cern.ch/crabserver/prod', u'cmsgwms-collector-global.cern.ch:9620,cmsgwms-collector-global.fnal.gov', u'crab3@vocms0196.cern.ch', u'F', u'[]', u'T', u'/store/user/ardas/', u'T', u'None', u'F', u'None', u'GEN_Hpp_NEW_test', u'None', u'979446cbbff9705eb4570a8bd9af36a67b0a5c07e53dd7934a09b5e701189849.tar.gz', u'62431218', u'filetransfers', u'F', u'188.185.120.166', u'0.0', u'None'], u'desc': {u'columns': [u'tm_taskname', u'tm_activity', u'panda_jobset_id', u'tm_task_status', u'tm_task_command', u'tm_start_time', u'tm_start_injection', u'tm_end_injection', u'tm_task_failure', u'tm_job_sw', u'tm_job_arch', u'tm_input_dataset', u'tm_nonvalid_input_dataset', u'tm_use_parent', u'tm_site_whitelist', u'tm_site_blacklist', u'tm_split_algo', u'tm_split_args', u'tm_user_sandbox', u'tm_cache_url', u'tm_username', u'tm_user_dn', u'tm_user_vo', u'tm_user_role', u'tm_user_group', u'tm_publish_name', u'tm_publish_groupname', u'tm_asyncdest', u'tm_dbs_url', u'tm_publish_dbs_url', u'tm_publication', u'tm_outfiles', u'tm_tfile_outfiles', u'tm_edm_outfiles', u'tm_job_type', u'tm_generator', u'tm_events_per_lumi', u'tm_arguments', u'panda_resubmitted_jobs', u'tm_save_logs', u'tw_name', u'tm_user_infiles', u'tm_maxjobruntime', u'tm_numcores', u'tm_maxmemory', u'tm_priority', u'tm_output_dataset', u'tm_task_warnings', u'tm_user_webdir', u'tm_scriptexe', u'tm_scriptargs', u'tm_extrajdl', u'tm_asourl', u'tm_collector', u'tm_schedd', u'tm_dry_run', u'tm_user_files', u'tm_transfer_outputs', u'tm_output_lfn', u'tm_ignore_locality', u'tm_fail_limit', u'tm_one_event_mode', u'tm_secondary_input_dataset', u'tm_primary_dataset', u'tm_last_publication', u'tm_debug_files', u'clusterid', u'tm_asodb', u'tm_ignore_global_blacklist', u'tm_submitter_ip_addr', u'tm_totalunits', u'tm_ddm_reqid']}}
+INFO 2021-03-09 15:28:22.315 UTC: 	 CRAB project directory:		/uscms_data/d3/adas2/pythia-stuff/EXO-MCsampleProductions/FullSimulation/RunIISummer20UL18/SIM__CMSSW_10_6_17_patch1/src/inputs/SIM_Hplusplus_M800_13TeV_test4/crab_projects/crab_SIM_Hplusplus_M800_13TeV_test4
+INFO 2021-03-09 15:28:22.315 UTC: 	 Task name:			210309_152709:ardas_crab_SIM_Hplusplus_M800_13TeV_test4
+INFO 2021-03-09 15:28:22.315 UTC: 	 Grid scheduler - Task Worker:	crab3@vocms0196.cern.ch - crab-prod-tw01
+INFO 2021-03-09 15:28:22.315 UTC: 	 Status on the CRAB server:	SUBMITTED
+INFO 2021-03-09 15:28:22.316 UTC: 	 Task URL to use for HELP:	https://cmsweb-k8s-prod.cern.ch/crabserver/ui/task/210309_152709%3Aardas_crab_SIM_Hplusplus_M800_13TeV_test4
+INFO 2021-03-09 15:28:22.323 UTC: 	 Dashboard monitoring URL:	https://monit-grafana.cern.ch/d/cmsTMDetail/cms-task-monitoring-task-view?orgId=11&var-user=ardas&var-task=210309_152709%3Aardas_crab_SIM_Hplusplus_M800_13TeV_test4&from=1615300029000&to=now
+INFO 2021-03-09 15:28:22.324 UTC: 	 In case of issues with the dashboard, please provide feedback to hn-cms-computing-tools@cern.ch
+WARNING 2021-03-09 15:28:22.324 UTC: 	 Warning:			The following sites from the user site whitelist are blacklisted by the CRAB server: [u'T2_BR_UERJ', u'T3_US_UCR', u'T3_US_FNALLPC', u'T3_FR_IPNL', u'T3_CN_PKU', u'T3_RU_FIAN', u'T3_US_PSC', u'T3_US_UMiss', u'T3_US_NotreDame', u'T2_RU_SINP', u'T3_US_SDSC', u'T3_IN_PUHEP', u'T3_US_OSG', u'T2_GR_Ioannina', u'T3_US_MIT', u'T2_CH_CERN_HLT', u'T3_US_Kansas', u'T3_US_Princeton_ICSE', u'T3_US_NERSC', u'T3_GR_IASA', u'T3_TW_NTU_HEP', u'T3_US_Rutgers', u'T3_IT_MIB', u'T2_RU_ITEP', u'T3_US_JHU', u'T3_BY_NCPHEP', u'T3_US_TACC', u'T3_KR_UOS', u'T3_CH_PSI', u'T3_IN_TIFRCloud']. Since the CRAB server blacklist has precedence, these sites are not considered in the user whitelist.
+DEBUG 2021-03-09 15:28:22.324 UTC: 	 The CRAB server submitted your task to the Grid scheduler (cluster ID: 62431218)
+DEBUG 2021-03-09 15:28:22.324 UTC: 	 Webdir is located at http://vocms0196.cern.ch/mon/cms009/210309_152709:ardas_crab_SIM_Hplusplus_M800_13TeV_test4
+DEBUG 2021-03-09 15:28:22.950 UTC: 	 Proxied webdir is located at https://cmsweb.cern.ch:8443/scheddmon/0196/cms009/210309_152709:ardas_crab_SIM_Hplusplus_M800_13TeV_test4
+DEBUG 2021-03-09 15:28:22.950 UTC: 	 Retrieving 'status_cache' file from https://cmsweb.cern.ch:8443/scheddmon/0196/cms009/210309_152709:ardas_crab_SIM_Hplusplus_M800_13TeV_test4/status_cache
+INFO 2021-03-09 15:28:23.549 UTC: 	 Waiting for the Grid scheduler to report back the status of your task
+ERROR 2021-03-09 15:28:23.549 UTC: 	 Cannot retrieve the status_cache file. Maybe the task process has not run yet? Got:
+url=https://cmsweb.cern.ch:8443/scheddmon/0196/cms009/210309_152709:ardas_crab_SIM_Hplusplus_M800_13TeV_test4/status_cache, code=403, reason=Forbidden, headers={'Content-Length': '363', 'Set-Cookie': 'cms-auth=79b1b4d772ed8df2d30f93dcef1fcff5e708dd05d50441f228301ef0839d64f77f3dc06e4982be43;path=/;secure;httponly;expires=Thu, 01-Jan-1970 00:00:01 GMT', 'Server': 'Apache/2.4.6 (CentOS)', 'Date': 'Tue, 09 Mar 2021 15:28:23 GMT', 'Content-Type': 'text/html; charset=iso-8859-1', 'CMS-Server-Time': 'D=54292 t=1615303703442009'}
+ERROR 2021-03-09 15:28:23.549 UTC: 	 url=https://cmsweb.cern.ch:8443/scheddmon/0196/cms009/210309_152709:ardas_crab_SIM_Hplusplus_M800_13TeV_test4/status_cache, code=403, reason=Forbidden, headers={'Content-Length': '363', 'Set-Cookie': 'cms-auth=79b1b4d772ed8df2d30f93dcef1fcff5e708dd05d50441f228301ef0839d64f77f3dc06e4982be43;path=/;secure;httponly;expires=Thu, 01-Jan-1970 00:00:01 GMT', 'Server': 'Apache/2.4.6 (CentOS)', 'Date': 'Tue, 09 Mar 2021 15:28:23 GMT', 'Content-Type': 'text/html; charset=iso-8859-1', 'CMS-Server-Time': 'D=54292 t=1615303703442009'}
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.201110.01/lib/CRABClient/Commands/status.py", line 117, in __call__
+    statusCacheData = getDataFromURL(url, self.proxyfilename)
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.201110.01/lib/CRABClient/UserUtilities.py", line 163, in getDataFromURL
+    capath=HTTPRequests.getCACertPath())
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.201110.01/lib/WMCore/Services/pycurl_manager.py", line 275, in request
+    raise exc
+HTTPException: url=https://cmsweb.cern.ch:8443/scheddmon/0196/cms009/210309_152709:ardas_crab_SIM_Hplusplus_M800_13TeV_test4/status_cache, code=403, reason=Forbidden, headers={'Content-Length': '363', 'Set-Cookie': 'cms-auth=79b1b4d772ed8df2d30f93dcef1fcff5e708dd05d50441f228301ef0839d64f77f3dc06e4982be43;path=/;secure;httponly;expires=Thu, 01-Jan-1970 00:00:01 GMT', 'Server': 'Apache/2.4.6 (CentOS)', 'Date': 'Tue, 09 Mar 2021 15:28:23 GMT', 'Content-Type': 'text/html; charset=iso-8859-1', 'CMS-Server-Time': 'D=54292 t=1615303703442009'}
+INFO 2021-03-09 15:28:23.556 UTC: 	 Log file is /uscms_data/d3/adas2/pythia-stuff/EXO-MCsampleProductions/FullSimulation/RunIISummer20UL18/SIM__CMSSW_10_6_17_patch1/src/inputs/SIM_Hplusplus_M800_13TeV_test4/crab_projects/crab_SIM_Hplusplus_M800_13TeV_test4/crab.log
+DEBUG 2021-03-09 17:05:05.513 UTC: 	 CRAB Client version: v3.201110
+DEBUG 2021-03-09 17:05:05.514 UTC: 	 Running on: Linux cmslpc147.fnal.gov 3.10.0-1160.6.1.el7.x86_64 #1 SMP Tue Nov 10 08:19:23 CST 2020 x86_64 x86_64 x86_64 GNU/Linux - Scientific Linux 7.9 (Nitrogen)
+DEBUG 2021-03-09 17:05:05.514 UTC: 	 Executing command: 'status'
+DEBUG 2021-03-09 17:05:05.514 UTC: 	 Found CRAB cache file /uscms/home/adas2/.crab3
+DEBUG 2021-03-09 17:05:05.532 UTC: 	 Checking credentials
+DEBUG 2021-03-09 17:05:05.533 UTC: 	 Found proxy file /uscms/home/adas2/x509up_u56079
+DEBUG 2021-03-09 17:05:05.533 UTC: 	 Getting proxy life time left
+DEBUG 2021-03-09 17:05:05.636 UTC: 	 Executing : 
+ command : voms-proxy-info -file /uscms/home/adas2/x509up_u56079 -timeleft
+ output : 37227
+
+ error: 
+ retcode : 0
+DEBUG 2021-03-09 17:05:05.740 UTC: 	 Executing : 
+ command : voms-proxy-info -file /uscms/home/adas2/x509up_u56079 -actimeleft
+ output : 37227
+
+ error: 
+ retcode : 0
+DEBUG 2021-03-09 17:05:05.740 UTC: 	 Proxy valid for 10:20:27 hours
+DEBUG 2021-03-09 17:05:06.319 UTC: 	 Registering user credentials for server /DC=ch/DC=cern/OU=computers/CN=vocms0105.cern.ch|/DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod|dev)-tw(02|01).cern.ch|/DC=ch/DC=cern/OU=computers/CN=(ddi|ddidk|mytw).cern.ch|/DC=ch/DC=cern/OU=computers/CN=stefanov(m|m2).cern.ch
+DEBUG 2021-03-09 17:05:06.429 UTC: 	 Executing : 
+ command : voms-proxy-info -file /uscms/home/adas2/x509up_u56079 -identity
+ output : /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=ardas/CN=845460/CN=Archan Das
+
+ error: 
+ retcode : 0
+DEBUG 2021-03-09 17:05:06.434 UTC: 	 Getting myproxy life time left for myproxy.cern.ch
+DEBUG 2021-03-09 17:05:06.434 UTC: 	 using 72d5c825fb94b0149673ac71b8d91bbefac4ebde as credential login name
+DEBUG 2021-03-09 17:05:07.339 UTC: 	 Executing : 
+ command : myproxy-info -l 72d5c825fb94b0149673ac71b8d91bbefac4ebde -s myproxy.cern.ch
+ output : username: 72d5c825fb94b0149673ac71b8d91bbefac4ebde
+owner: /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=ardas/CN=845460/CN=Archan Das
+  renewal policy: /DC=ch/DC=cern/OU=computers/CN=vocms0105.cern.ch|/DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod|dev)-tw(02|01).cern.ch|/DC=ch/DC=cern/OU=computers/CN=(ddi|ddidk|mytw).cern.ch|/DC=ch/DC=cern/OU=computers/CN=stefanov(m|m2).cern.ch
+  trusted retrieval policy: /DC=ch/DC=cern/OU=computers/CN=vocms0105.cern.ch|/DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod|dev)-tw(02|01).cern.ch|/DC=ch/DC=cern/OU=computers/CN=(ddi|ddidk|mytw).cern.ch|/DC=ch/DC=cern/OU=computers/CN=stefanov(m|m2).cern.ch
+  timeleft: 367:34:47  (15.3 days)
+
+ error: 
+ retcode : 0
+DEBUG 2021-03-09 17:05:07.340 UTC: 	 Myproxy is valid: 1323287
+DEBUG 2021-03-09 17:05:07.340 UTC: 	 Retrieving username ...
+DEBUG 2021-03-09 17:05:07.340 UTC: 	 Retrieving username from CRIC...
+DEBUG 2021-03-09 17:05:08.655 UTC: 	 username is ardas
+DEBUG 2021-03-09 17:05:08.662 UTC: 	 Getting myproxy life time left for myproxy.cern.ch
+DEBUG 2021-03-09 17:05:08.662 UTC: 	 using ardas_CRAB as credential login name
+DEBUG 2021-03-09 17:05:09.369 UTC: 	 Executing : 
+ command : myproxy-info -l ardas_CRAB -s myproxy.cern.ch
+ output : username: ardas_CRAB
+owner: /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=ardas/CN=845460/CN=Archan Das
+  renewal policy: /DC=ch/DC=cern/OU=computers/CN=vocms0105.cern.ch|/DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod|dev)-tw(02|01).cern.ch|/DC=ch/DC=cern/OU=computers/CN=(ddi|ddidk|mytw).cern.ch|/DC=ch/DC=cern/OU=computers/CN=stefanov(m|m2).cern.ch
+  trusted retrieval policy: /DC=ch/DC=cern/OU=computers/CN=vocms0105.cern.ch|/DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod|dev)-tw(02|01).cern.ch|/DC=ch/DC=cern/OU=computers/CN=(ddi|ddidk|mytw).cern.ch|/DC=ch/DC=cern/OU=computers/CN=stefanov(m|m2).cern.ch
+  timeleft: 367:34:55  (15.3 days)
+
+ error: 
+ retcode : 0
+DEBUG 2021-03-09 17:05:09.370 UTC: 	 Myproxy is valid: 1323295
+DEBUG 2021-03-09 17:05:09.370 UTC: 	 Result of myproxy credential check:
+  Credential exists on myproxy: username: 72d5c825fb94b0149673ac71b8d91bbefac4ebde  - validity: 15 days, 7:34:47
+  Credential exists on myproxy: username: ardas_CRAB  - validity: 15 days, 7:34:55
+DEBUG 2021-03-09 17:05:09.371 UTC: 	 Command use: status
+DEBUG 2021-03-09 17:05:09.371 UTC: 	 Options use: []
+DEBUG 2021-03-09 17:05:09.992 UTC: 	 CRABClient version: v3.201110
+DEBUG 2021-03-09 17:05:09.992 UTC: 	 Instance is prod
+DEBUG 2021-03-09 17:05:09.992 UTC: 	 Server base url is cmsweb-k8s-prod.cern.ch
+DEBUG 2021-03-09 17:05:09.992 UTC: 	 Command url /crabserver/prod/workflow
+DEBUG 2021-03-09 17:05:10.617 UTC: 	 Got information from server oracle database: {u'result': [u'210309_152709:ardas_crab_SIM_Hplusplus_M800_13TeV_test4', u'None', u'None', u'SUBMITTED', u'SUBMIT', u'2021-03-09 15:27:09.534070', u'None', u'2021-03-09 15:27:50.743279', u'None', u'CMSSW_10_6_17_patch1', u'slc7_amd64_gcc700', u'/GEN_Hpp_NEW_test/ardas-RunIISummer20UL18_GEN-42b65214d01566d851ba74f16b93e2b1/USER', u'F', u'0', u"['T3_US_PuertoRico', 'T3_RU_MEPhI', 'T2_FI_HIP', 'T2_UK_SGrid_RALPP', 'T2_FR_GRIF_LLR', 'T3_US_Baylor', 'T3_UK_London_QMUL', 'T3_TW_NTU_HEP', 'T2_RU_SINP', 'T3_US_UMD', 'T3_US_Colorado', 'T3_US_Kansas', 'T3_GR_IASA', 'T2_IT_Bari', 'T2_US_UCSD', 'T2_RU_IHEP', 'T3_US_JHU', 'T3_BY_NCPHEP', 'T2_US_Vanderbilt', 'T3_US_UCR', 'T3_TW_NCU', 'T2_CH_CSCS', 'T2_UA_KIPT', 'T2_PK_NCP', 'T3_KR_KNU', 'T2_FR_IPHC', 'T3_US_OSU', 'T3_US_TAMU', 'T2_IT_Rome', 'T2_UK_London_Brunel', 'T3_IN_PUHEP', 'T3_US_OSG', 'T3_IT_Trieste', 'T2_EE_Estonia', 'T2_IN_TIFR', 'T2_CN_Beijing', 'T2_US_Florida', 'T3_US_Princeton_ICSE', 'T3_IT_MIB', 'T3_US_PSC', 'T3_US_Rutgers', 'T2_US_Wisconsin', 'T2_HU_Budapest', 'T2_DE_RWTH', 'T2_BR_SPRACE', 'T3_UK_SGrid_Oxford', 'T3_US_TACC', 'T2_CH_CERN', 'T2_BR_UERJ', 'T3_MX_Cinvestav', 'T3_US_FNALLPC', 'T3_RU_FIAN', 'T3_CH_CERN_DOMA', 'T2_ES_IFCA', 'T3_ES_Oviedo', 'T3_US_NotreDame', 'T2_DE_DESY', 'T3_HU_Debrecen', 'T2_US_Caltech', 'T3_US_VC3_NotreDame', 'T3_FR_IPNL', 'T3_BG_UNI_SOFIA', 'T3_UK_London_RHUL', 'T3_IN_TIFRCloud', 'T3_CN_PKU', 'T2_UK_London_IC', 'T2_US_Nebraska', 'T2_ES_CIEMAT', 'T3_UK_ScotGrid_GLA', 'T2_KR_KISTI', 'T3_KR_UOS', 'T3_IT_Perugia', 'T2_TR_METU', 'T2_AT_Vienna', 'T2_US_Purdue', 'T3_US_Rice', 'T2_TW_NCHC', 'T2_BE_UCL', 'T3_US_FIT', 'T2_UK_SGrid_Bristol', 'T2_PT_NCG_Lisbon', 'T3_US_UMiss', 'T2_IT_Legnaro', 'T2_RU_ITEP', 'T3_US_SDSC', 'T2_RU_JINR', 'T2_IT_Pisa', 'T2_GR_Ioannina', 'T3_US_MIT', 'T2_CH_CERN_HLT', 'T2_FR_GRIF_IRFU', 'T3_US_NERSC', 'T2_FR_CCIN2P3', 'T2_US_MIT', 'T2_BE_IIHE', 'T2_RU_INR', 'T2_PL_Swierk', 'T3_CH_PSI', 'T3_IT_Bologna']", u'[]', u'FileBased', u"{'splitOnRun': False, 'halt_job_on_file_boundaries': False, 'files_per_job': 1, 'runs': [], 'lumis': []}", u'fb53c35d6c0193bac07889c3ca982bedc481ef263e4ee312073afb7780922e6d.tar.gz', u'https://cmsweb.cern.ch:8443/crabcache', u'ardas', u'/DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=ardas/CN=845460/CN=Archan Das', u'cms', u'None', u'None', u'RunIISummer20UL18_SIM-00000000000000000000000000000000', u'F', u'T3_US_FNALLPC', u'https://cmsweb.cern.ch/dbs/prod/phys03/DBSReader', u'https://cmsweb.cern.ch/dbs/prod/phys03/DBSWriter', u'T', u'[]', u'[]', u"['SIM.root']", u'Analysis', u'pythia', u'None', u'{}', u'[]', u'T', u'crab-prod-tw01', u'[]', u'1250', u'4', u'4000', u'10', u'None', u'["The following sites from the user site whitelist are blacklisted by the CRAB server: [u\'T2_BR_UERJ\', u\'T3_US_UCR\', u\'T3_US_FNALLPC\', u\'T3_FR_IPNL\', u\'T3_CN_PKU\', u\'T3_RU_FIAN\', u\'T3_US_PSC\', u\'T3_US_UMiss\', u\'T3_US_NotreDame\', u\'T2_RU_SINP\', u\'T3_US_SDSC\', u\'T3_IN_PUHEP\', u\'T3_US_OSG\', u\'T2_GR_Ioannina\', u\'T3_US_MIT\', u\'T2_CH_CERN_HLT\', u\'T3_US_Kansas\', u\'T3_US_Princeton_ICSE\', u\'T3_US_NERSC\', u\'T3_GR_IASA\', u\'T3_TW_NTU_HEP\', u\'T3_US_Rutgers\', u\'T3_IT_MIB\', u\'T2_RU_ITEP\', u\'T3_US_JHU\', u\'T3_BY_NCPHEP\', u\'T3_US_TACC\', u\'T3_KR_UOS\', u\'T3_CH_PSI\', u\'T3_IN_TIFRCloud\']. Since the CRAB server blacklist has precedence, these sites are not considered in the user whitelist."]', u'http://vocms0196.cern.ch/mon/cms009/210309_152709:ardas_crab_SIM_Hplusplus_M800_13TeV_test4', u'None', u'[]', u'[]', u'https://cmsweb.cern.ch/crabserver/prod', u'cmsgwms-collector-global.cern.ch:9620,cmsgwms-collector-global.fnal.gov', u'crab3@vocms0196.cern.ch', u'F', u'[]', u'T', u'/store/user/ardas/', u'T', u'None', u'F', u'None', u'GEN_Hpp_NEW_test', u'None', u'979446cbbff9705eb4570a8bd9af36a67b0a5c07e53dd7934a09b5e701189849.tar.gz', u'62431218', u'filetransfers', u'F', u'188.185.120.166', u'0.0', u'None'], u'desc': {u'columns': [u'tm_taskname', u'tm_activity', u'panda_jobset_id', u'tm_task_status', u'tm_task_command', u'tm_start_time', u'tm_start_injection', u'tm_end_injection', u'tm_task_failure', u'tm_job_sw', u'tm_job_arch', u'tm_input_dataset', u'tm_nonvalid_input_dataset', u'tm_use_parent', u'tm_site_whitelist', u'tm_site_blacklist', u'tm_split_algo', u'tm_split_args', u'tm_user_sandbox', u'tm_cache_url', u'tm_username', u'tm_user_dn', u'tm_user_vo', u'tm_user_role', u'tm_user_group', u'tm_publish_name', u'tm_publish_groupname', u'tm_asyncdest', u'tm_dbs_url', u'tm_publish_dbs_url', u'tm_publication', u'tm_outfiles', u'tm_tfile_outfiles', u'tm_edm_outfiles', u'tm_job_type', u'tm_generator', u'tm_events_per_lumi', u'tm_arguments', u'panda_resubmitted_jobs', u'tm_save_logs', u'tw_name', u'tm_user_infiles', u'tm_maxjobruntime', u'tm_numcores', u'tm_maxmemory', u'tm_priority', u'tm_output_dataset', u'tm_task_warnings', u'tm_user_webdir', u'tm_scriptexe', u'tm_scriptargs', u'tm_extrajdl', u'tm_asourl', u'tm_collector', u'tm_schedd', u'tm_dry_run', u'tm_user_files', u'tm_transfer_outputs', u'tm_output_lfn', u'tm_ignore_locality', u'tm_fail_limit', u'tm_one_event_mode', u'tm_secondary_input_dataset', u'tm_primary_dataset', u'tm_last_publication', u'tm_debug_files', u'clusterid', u'tm_asodb', u'tm_ignore_global_blacklist', u'tm_submitter_ip_addr', u'tm_totalunits', u'tm_ddm_reqid']}}
+INFO 2021-03-09 17:05:10.618 UTC: 	 CRAB project directory:		/uscms_data/d3/adas2/pythia-stuff/EXO-MCsampleProductions/FullSimulation/RunIISummer20UL18/SIM__CMSSW_10_6_17_patch1/src/inputs/SIM_Hplusplus_M800_13TeV_test4/crab_projects/crab_SIM_Hplusplus_M800_13TeV_test4
+INFO 2021-03-09 17:05:10.618 UTC: 	 Task name:			210309_152709:ardas_crab_SIM_Hplusplus_M800_13TeV_test4
+INFO 2021-03-09 17:05:10.618 UTC: 	 Grid scheduler - Task Worker:	crab3@vocms0196.cern.ch - crab-prod-tw01
+INFO 2021-03-09 17:05:10.618 UTC: 	 Status on the CRAB server:	SUBMITTED
+INFO 2021-03-09 17:05:10.618 UTC: 	 Task URL to use for HELP:	https://cmsweb-k8s-prod.cern.ch/crabserver/ui/task/210309_152709%3Aardas_crab_SIM_Hplusplus_M800_13TeV_test4
+INFO 2021-03-09 17:05:10.643 UTC: 	 Dashboard monitoring URL:	https://monit-grafana.cern.ch/d/cmsTMDetail/cms-task-monitoring-task-view?orgId=11&var-user=ardas&var-task=210309_152709%3Aardas_crab_SIM_Hplusplus_M800_13TeV_test4&from=1615300029000&to=now
+INFO 2021-03-09 17:05:10.643 UTC: 	 In case of issues with the dashboard, please provide feedback to hn-cms-computing-tools@cern.ch
+WARNING 2021-03-09 17:05:10.643 UTC: 	 Warning:			The following sites from the user site whitelist are blacklisted by the CRAB server: [u'T2_BR_UERJ', u'T3_US_UCR', u'T3_US_FNALLPC', u'T3_FR_IPNL', u'T3_CN_PKU', u'T3_RU_FIAN', u'T3_US_PSC', u'T3_US_UMiss', u'T3_US_NotreDame', u'T2_RU_SINP', u'T3_US_SDSC', u'T3_IN_PUHEP', u'T3_US_OSG', u'T2_GR_Ioannina', u'T3_US_MIT', u'T2_CH_CERN_HLT', u'T3_US_Kansas', u'T3_US_Princeton_ICSE', u'T3_US_NERSC', u'T3_GR_IASA', u'T3_TW_NTU_HEP', u'T3_US_Rutgers', u'T3_IT_MIB', u'T2_RU_ITEP', u'T3_US_JHU', u'T3_BY_NCPHEP', u'T3_US_TACC', u'T3_KR_UOS', u'T3_CH_PSI', u'T3_IN_TIFRCloud']. Since the CRAB server blacklist has precedence, these sites are not considered in the user whitelist.
+DEBUG 2021-03-09 17:05:10.643 UTC: 	 The CRAB server submitted your task to the Grid scheduler (cluster ID: 62431218)
+DEBUG 2021-03-09 17:05:10.643 UTC: 	 Webdir is located at http://vocms0196.cern.ch/mon/cms009/210309_152709:ardas_crab_SIM_Hplusplus_M800_13TeV_test4
+DEBUG 2021-03-09 17:05:11.211 UTC: 	 Proxied webdir is located at https://cmsweb.cern.ch:8443/scheddmon/0196/cms009/210309_152709:ardas_crab_SIM_Hplusplus_M800_13TeV_test4
+DEBUG 2021-03-09 17:05:11.211 UTC: 	 Retrieving 'status_cache' file from https://cmsweb.cern.ch:8443/scheddmon/0196/cms009/210309_152709:ardas_crab_SIM_Hplusplus_M800_13TeV_test4/status_cache
+DEBUG 2021-03-09 17:05:11.773 UTC: 	 Got information from status cache file: {'11': {'Retries': 0, 'WallDurations': [8.0, 193.29563403129578, 4535.0], 'StartTimes': [1615303861.0], 'SubmitTimes': [1615303683.0], 'JobIds': ['62431236.0'], 'EndTimes': [1615308396.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'transferring', 'ResidentSetSize': [1166604], 'TotalUserCpuTimeHistory': [17314], 'SiteHistory': ['Unknown', 'T2_US_MIT', 'T2_US_MIT'], 'TotalSysCpuTimeHistory': [147]}, '10': {'Retries': 0, 'WallDurations': [9.0, 190.29563403129578, 5417.0], 'StartTimes': [1615303864.0], 'SubmitTimes': [1615303683.0], 'JobIds': ['62431233.0'], 'EndTimes': [], 'Restarts': 0, 'RecordedSite': True, 'State': 'running', 'ResidentSetSize': [1229920], 'TotalUserCpuTimeHistory': [20169.0], 'SiteHistory': ['Unknown', 'T2_US_UCSD', 'T2_US_UCSD'], 'TotalSysCpuTimeHistory': [174.0]}, '13': {'Retries': 0, 'WallDurations': [9.0, 193.29563403129578, 5041.0], 'StartTimes': [1615303861.0], 'SubmitTimes': [1615303683.0], 'JobIds': ['62431241.0'], 'EndTimes': [1615308902.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'transferring', 'ResidentSetSize': [1258244], 'TotalUserCpuTimeHistory': [19206], 'SiteHistory': ['Unknown', 'T2_US_Wisconsin', 'T2_US_Wisconsin'], 'TotalSysCpuTimeHistory': [177]}, '12': {'Retries': 0, 'WallDurations': [8.0, 190.29563403129578, 3851.0], 'StartTimes': [1615303864.0], 'SubmitTimes': [1615303683.0], 'JobIds': ['62431238.0'], 'EndTimes': [1615307715.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'transferring', 'ResidentSetSize': [1039560], 'TotalUserCpuTimeHistory': [14049], 'SiteHistory': ['Unknown', 'T2_US_UCSD', 'T2_US_UCSD'], 'TotalSysCpuTimeHistory': [245]}, '15': {'Retries': 0, 'WallDurations': [8.0, 193.29563403129578, 5465.0], 'StartTimes': [1615303861.0], 'SubmitTimes': [1615303684.0], 'JobIds': ['62431244.0'], 'EndTimes': [1615309326.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'transferring', 'ResidentSetSize': [1031192], 'TotalUserCpuTimeHistory': [20222], 'SiteHistory': ['Unknown', 'T2_US_MIT', 'T2_US_MIT'], 'TotalSysCpuTimeHistory': [256]}, '14': {'Retries': 0, 'WallDurations': [8.0, 193.29563403129578, 4925.0], 'StartTimes': [1615303861.0], 'SubmitTimes': [1615303683.0], 'JobIds': ['62431242.0'], 'EndTimes': [1615308786.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'transferring', 'ResidentSetSize': [1097500], 'TotalUserCpuTimeHistory': [18613], 'SiteHistory': ['Unknown', 'T2_US_MIT', 'T2_US_MIT'], 'TotalSysCpuTimeHistory': [291]}, '17': {'Retries': 0, 'WallDurations': [8.0, 192.29563403129578, 4901.0], 'StartTimes': [1615303862.0], 'SubmitTimes': [1615303684.0], 'JobIds': ['62431248.0'], 'EndTimes': [1615308763.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'transferring', 'ResidentSetSize': [1119588], 'TotalUserCpuTimeHistory': [18530], 'SiteHistory': ['Unknown', 'T2_US_MIT', 'T2_US_MIT'], 'TotalSysCpuTimeHistory': [275]}, '16': {'Retries': 0, 'WallDurations': [8.0, 192.29563403129578, 5381.0], 'StartTimes': [1615303862.0], 'SubmitTimes': [1615303684.0], 'JobIds': ['62431246.0'], 'EndTimes': [1615309243.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'transferring', 'ResidentSetSize': [1082056], 'TotalUserCpuTimeHistory': [20497], 'SiteHistory': ['Unknown', 'T2_US_MIT', 'T2_US_MIT'], 'TotalSysCpuTimeHistory': [188]}, '19': {'Retries': 0, 'WallDurations': [8.0, 192.29563403129578, 5049.0], 'StartTimes': [1615303862.0], 'SubmitTimes': [1615303684.0], 'JobIds': ['62431251.0'], 'EndTimes': [1615308911.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'transferring', 'ResidentSetSize': [1215608], 'TotalUserCpuTimeHistory': [19004], 'SiteHistory': ['Unknown', 'T2_US_MIT', 'T2_US_MIT'], 'TotalSysCpuTimeHistory': [291]}, '18': {'Retries': 0, 'WallDurations': [10.0, 193.29563403129578, 4505.0], 'StartTimes': [1615303861.0], 'SubmitTimes': [1615303684.0], 'JobIds': ['62431249.0'], 'EndTimes': [1615308366.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'transferring', 'ResidentSetSize': [1148648], 'TotalUserCpuTimeHistory': [17314], 'SiteHistory': ['Unknown', 'T2_US_MIT', 'T2_US_MIT'], 'TotalSysCpuTimeHistory': [135]}, '1': {'Retries': 0, 'WallDurations': [9.0, 193.29563403129578, 5430.0], 'StartTimes': [1615303861.0], 'SubmitTimes': [1615303676.0], 'JobIds': ['62431220.0'], 'EndTimes': [1615309291.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'transferring', 'ResidentSetSize': [1016164], 'TotalUserCpuTimeHistory': [20224], 'SiteHistory': ['Unknown', 'T2_US_MIT', 'T2_US_MIT'], 'TotalSysCpuTimeHistory': [224]}, '3': {'Retries': 0, 'WallDurations': [9.0, 192.29563403129578, 4803.0], 'StartTimes': [1615303862.0], 'SubmitTimes': [1615303677.0], 'JobIds': ['62431222.0'], 'EndTimes': [1615308665.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'transferring', 'ResidentSetSize': [1106844], 'TotalUserCpuTimeHistory': [18127], 'SiteHistory': ['Unknown', 'T2_US_MIT', 'T2_US_MIT'], 'TotalSysCpuTimeHistory': [266]}, '2': {'Retries': 0, 'WallDurations': [9.0, 192.29563403129578, 4904.0], 'StartTimes': [1615303862.0], 'SubmitTimes': [1615303676.0], 'JobIds': ['62431221.0'], 'EndTimes': [1615308766.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'transferring', 'ResidentSetSize': [1191404], 'TotalUserCpuTimeHistory': [18676], 'SiteHistory': ['Unknown', 'T2_US_Wisconsin', 'T2_US_Wisconsin'], 'TotalSysCpuTimeHistory': [182]}, '5': {'Retries': 0, 'WallDurations': [9.0, 192.29563403129578, 5373.0], 'StartTimes': [1615303862.0], 'SubmitTimes': [1615303677.0], 'JobIds': ['62431224.0'], 'EndTimes': [1615309235.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'transferring', 'ResidentSetSize': [1058128], 'TotalUserCpuTimeHistory': [20557], 'SiteHistory': ['Unknown', 'T2_US_MIT', 'T2_US_MIT'], 'TotalSysCpuTimeHistory': [112]}, '4': {'Retries': 0, 'WallDurations': [8.0, 189.29563403129578, 5530.0], 'StartTimes': [1615303865.0], 'SubmitTimes': [1615303677.0], 'JobIds': ['62431223.0'], 'EndTimes': [1615309395.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'transferring', 'ResidentSetSize': [1286708], 'TotalUserCpuTimeHistory': [20809], 'SiteHistory': ['Unknown', 'T2_US_UCSD', 'T2_US_UCSD'], 'TotalSysCpuTimeHistory': [187]}, '7': {'Retries': 0, 'WallDurations': [10.0, 190.29563403129578, 5100.0], 'StartTimes': [1615303864.0], 'SubmitTimes': [1615303682.0], 'JobIds': ['62431227.0'], 'EndTimes': [1615308964.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'transferring', 'ResidentSetSize': [1189776], 'TotalUserCpuTimeHistory': [18797], 'SiteHistory': ['Unknown', 'T2_US_UCSD', 'T2_US_UCSD'], 'TotalSysCpuTimeHistory': [236]}, '6': {'Retries': 0, 'WallDurations': [9.0, 184.29563403129578, 5119.0], 'StartTimes': [1615303870.0], 'SubmitTimes': [1615303682.0], 'JobIds': ['62431225.0'], 'EndTimes': [], 'Restarts': 0, 'RecordedSite': True, 'State': 'running', 'ResidentSetSize': [1155100], 'TotalUserCpuTimeHistory': [18806.0], 'SiteHistory': ['Unknown', 'T2_US_Caltech', 'T2_US_Caltech'], 'TotalSysCpuTimeHistory': [396.0]}, '9': {'Retries': 0, 'WallDurations': [10.0, 194.29563403129578, 4806.0], 'StartTimes': [1615303860.0], 'SubmitTimes': [1615303683.0], 'JobIds': ['62431231.0'], 'EndTimes': [1615308666.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'transferring', 'ResidentSetSize': [1102256], 'TotalUserCpuTimeHistory': [17818], 'SiteHistory': ['Unknown', 'T2_US_MIT', 'T2_US_MIT'], 'TotalSysCpuTimeHistory': [256]}, '20': {'Retries': 0, 'WallDurations': [8.0, 192.29563403129578, 4922.0], 'StartTimes': [1615303862.0], 'SubmitTimes': [1615303684.0], 'JobIds': ['62431253.0'], 'EndTimes': [1615308784.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'transferring', 'ResidentSetSize': [1135372], 'TotalUserCpuTimeHistory': [18497], 'SiteHistory': ['Unknown', 'T2_US_MIT', 'T2_US_MIT'], 'TotalSysCpuTimeHistory': [223]}, '8': {'Retries': 0, 'WallDurations': [8.0, 191.29563403129578, 4069.0], 'StartTimes': [1615303863.0], 'SubmitTimes': [1615303683.0], 'JobIds': ['62431229.0'], 'EndTimes': [1615307932.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'transferring', 'ResidentSetSize': [1131580], 'TotalUserCpuTimeHistory': [15003], 'SiteHistory': ['Unknown', 'T2_US_Purdue', 'T2_US_Purdue'], 'TotalSysCpuTimeHistory': [177]}}
+INFO 2021-03-09 17:05:11.773 UTC: 	 Status on the scheduler:	SUBMITTED
+INFO 2021-03-09 17:05:11.774 UTC: 	 
+Jobs status:                    running      		 10.0% ( 2/20)
+INFO 2021-03-09 17:05:11.774 UTC: 	 				transferring 		 90.0% (18/20)
+INFO 2021-03-09 17:05:11.774 UTC: 	 
+No publication information available yet
+INFO 2021-03-09 17:05:11.775 UTC: 	 
+Warning: the max jobs runtime is less than 30% of the task requested value (1250 min), please consider to request a lower value for failed jobs (allowed through crab resubmit) and/or improve the jobs splitting (e.g. config.Data.splitting = 'Automatic') in a new task.
+INFO 2021-03-09 17:05:11.775 UTC: 	 
+Warning: the max jobs memory is less than 70% of the task requested value (4000 MB), please consider to request a lower value for failed jobs (allowed through crab resubmit) and/or improve the jobs splitting (e.g. config.Data.splitting = 'Automatic') in a new task.
+INFO 2021-03-09 17:05:11.775 UTC: 	 
+Summary of run jobs:
+ * Memory: 992MB min, 1256MB max, 1106MB ave
+ * Runtime: 1:04:11 min, 1:32:10 max, 1:22:01 ave
+ * CPU eff: 93% min, 97% max, 95% ave
+ * Waste: 1:00:16 (4% of total)
+
+INFO 2021-03-09 17:05:11.778 UTC: 	 Log file is /uscms_data/d3/adas2/pythia-stuff/EXO-MCsampleProductions/FullSimulation/RunIISummer20UL18/SIM__CMSSW_10_6_17_patch1/src/inputs/SIM_Hplusplus_M800_13TeV_test4/crab_projects/crab_SIM_Hplusplus_M800_13TeV_test4/crab.log
+DEBUG 2021-03-09 17:14:25.614 UTC: 	 CRAB Client version: v3.201110
+DEBUG 2021-03-09 17:14:25.614 UTC: 	 Running on: Linux cmslpc163.fnal.gov 3.10.0-1160.15.2.el7.x86_64 #1 SMP Tue Feb 2 08:13:55 CST 2021 x86_64 x86_64 x86_64 GNU/Linux - Scientific Linux 7.9 (Nitrogen)
+DEBUG 2021-03-09 17:14:25.614 UTC: 	 Executing command: 'status'
+DEBUG 2021-03-09 17:14:25.614 UTC: 	 Found CRAB cache file /uscms/home/adas2/.crab3
+DEBUG 2021-03-09 17:14:25.633 UTC: 	 Checking credentials
+DEBUG 2021-03-09 17:14:25.633 UTC: 	 Found proxy file /uscms/home/adas2/x509up_u56079
+DEBUG 2021-03-09 17:14:25.633 UTC: 	 Getting proxy life time left
+DEBUG 2021-03-09 17:14:25.736 UTC: 	 Executing : 
+ command : voms-proxy-info -file /uscms/home/adas2/x509up_u56079 -timeleft
+ output : 36667
+
+ error: 
+ retcode : 0
+DEBUG 2021-03-09 17:14:25.838 UTC: 	 Executing : 
+ command : voms-proxy-info -file /uscms/home/adas2/x509up_u56079 -actimeleft
+ output : 36667
+
+ error: 
+ retcode : 0
+DEBUG 2021-03-09 17:14:25.838 UTC: 	 Proxy valid for 10:11:07 hours
+DEBUG 2021-03-09 17:14:26.393 UTC: 	 Registering user credentials for server /DC=ch/DC=cern/OU=computers/CN=vocms0105.cern.ch|/DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod|dev)-tw(02|01).cern.ch|/DC=ch/DC=cern/OU=computers/CN=(ddi|ddidk|mytw).cern.ch|/DC=ch/DC=cern/OU=computers/CN=stefanov(m|m2).cern.ch
+DEBUG 2021-03-09 17:14:26.499 UTC: 	 Executing : 
+ command : voms-proxy-info -file /uscms/home/adas2/x509up_u56079 -identity
+ output : /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=ardas/CN=845460/CN=Archan Das
+
+ error: 
+ retcode : 0
+DEBUG 2021-03-09 17:14:26.502 UTC: 	 Getting myproxy life time left for myproxy.cern.ch
+DEBUG 2021-03-09 17:14:26.502 UTC: 	 using 72d5c825fb94b0149673ac71b8d91bbefac4ebde as credential login name
+DEBUG 2021-03-09 17:14:27.306 UTC: 	 Executing : 
+ command : myproxy-info -l 72d5c825fb94b0149673ac71b8d91bbefac4ebde -s myproxy.cern.ch
+ output : username: 72d5c825fb94b0149673ac71b8d91bbefac4ebde
+owner: /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=ardas/CN=845460/CN=Archan Das
+  renewal policy: /DC=ch/DC=cern/OU=computers/CN=vocms0105.cern.ch|/DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod|dev)-tw(02|01).cern.ch|/DC=ch/DC=cern/OU=computers/CN=(ddi|ddidk|mytw).cern.ch|/DC=ch/DC=cern/OU=computers/CN=stefanov(m|m2).cern.ch
+  trusted retrieval policy: /DC=ch/DC=cern/OU=computers/CN=vocms0105.cern.ch|/DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod|dev)-tw(02|01).cern.ch|/DC=ch/DC=cern/OU=computers/CN=(ddi|ddidk|mytw).cern.ch|/DC=ch/DC=cern/OU=computers/CN=stefanov(m|m2).cern.ch
+  timeleft: 367:25:27  (15.3 days)
+
+ error: 
+ retcode : 0
+DEBUG 2021-03-09 17:14:27.307 UTC: 	 Myproxy is valid: 1322727
+DEBUG 2021-03-09 17:14:27.307 UTC: 	 Retrieving username ...
+DEBUG 2021-03-09 17:14:27.307 UTC: 	 Retrieving username from CRIC...
+DEBUG 2021-03-09 17:14:29.935 UTC: 	 username is ardas
+DEBUG 2021-03-09 17:14:29.938 UTC: 	 Getting myproxy life time left for myproxy.cern.ch
+DEBUG 2021-03-09 17:14:29.938 UTC: 	 using ardas_CRAB as credential login name
+DEBUG 2021-03-09 17:14:30.743 UTC: 	 Executing : 
+ command : myproxy-info -l ardas_CRAB -s myproxy.cern.ch
+ output : username: ardas_CRAB
+owner: /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=ardas/CN=845460/CN=Archan Das
+  renewal policy: /DC=ch/DC=cern/OU=computers/CN=vocms0105.cern.ch|/DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod|dev)-tw(02|01).cern.ch|/DC=ch/DC=cern/OU=computers/CN=(ddi|ddidk|mytw).cern.ch|/DC=ch/DC=cern/OU=computers/CN=stefanov(m|m2).cern.ch
+  trusted retrieval policy: /DC=ch/DC=cern/OU=computers/CN=vocms0105.cern.ch|/DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod|dev)-tw(02|01).cern.ch|/DC=ch/DC=cern/OU=computers/CN=(ddi|ddidk|mytw).cern.ch|/DC=ch/DC=cern/OU=computers/CN=stefanov(m|m2).cern.ch
+  timeleft: 367:25:34  (15.3 days)
+
+ error: 
+ retcode : 0
+DEBUG 2021-03-09 17:14:30.743 UTC: 	 Myproxy is valid: 1322734
+DEBUG 2021-03-09 17:14:30.744 UTC: 	 Result of myproxy credential check:
+  Credential exists on myproxy: username: 72d5c825fb94b0149673ac71b8d91bbefac4ebde  - validity: 15 days, 7:25:27
+  Credential exists on myproxy: username: ardas_CRAB  - validity: 15 days, 7:25:34
+DEBUG 2021-03-09 17:14:30.744 UTC: 	 Command use: status
+DEBUG 2021-03-09 17:14:30.744 UTC: 	 Options use: []
+DEBUG 2021-03-09 17:14:31.359 UTC: 	 CRABClient version: v3.201110
+DEBUG 2021-03-09 17:14:31.359 UTC: 	 Instance is prod
+DEBUG 2021-03-09 17:14:31.360 UTC: 	 Server base url is cmsweb-k8s-prod.cern.ch
+DEBUG 2021-03-09 17:14:31.360 UTC: 	 Command url /crabserver/prod/workflow
+DEBUG 2021-03-09 17:14:31.976 UTC: 	 Got information from server oracle database: {u'result': [u'210309_152709:ardas_crab_SIM_Hplusplus_M800_13TeV_test4', u'None', u'None', u'SUBMITTED', u'SUBMIT', u'2021-03-09 15:27:09.534070', u'None', u'2021-03-09 15:27:50.743279', u'None', u'CMSSW_10_6_17_patch1', u'slc7_amd64_gcc700', u'/GEN_Hpp_NEW_test/ardas-RunIISummer20UL18_GEN-42b65214d01566d851ba74f16b93e2b1/USER', u'F', u'0', u"['T3_US_PuertoRico', 'T3_RU_MEPhI', 'T2_FI_HIP', 'T2_UK_SGrid_RALPP', 'T2_FR_GRIF_LLR', 'T3_US_Baylor', 'T3_UK_London_QMUL', 'T3_TW_NTU_HEP', 'T2_RU_SINP', 'T3_US_UMD', 'T3_US_Colorado', 'T3_US_Kansas', 'T3_GR_IASA', 'T2_IT_Bari', 'T2_US_UCSD', 'T2_RU_IHEP', 'T3_US_JHU', 'T3_BY_NCPHEP', 'T2_US_Vanderbilt', 'T3_US_UCR', 'T3_TW_NCU', 'T2_CH_CSCS', 'T2_UA_KIPT', 'T2_PK_NCP', 'T3_KR_KNU', 'T2_FR_IPHC', 'T3_US_OSU', 'T3_US_TAMU', 'T2_IT_Rome', 'T2_UK_London_Brunel', 'T3_IN_PUHEP', 'T3_US_OSG', 'T3_IT_Trieste', 'T2_EE_Estonia', 'T2_IN_TIFR', 'T2_CN_Beijing', 'T2_US_Florida', 'T3_US_Princeton_ICSE', 'T3_IT_MIB', 'T3_US_PSC', 'T3_US_Rutgers', 'T2_US_Wisconsin', 'T2_HU_Budapest', 'T2_DE_RWTH', 'T2_BR_SPRACE', 'T3_UK_SGrid_Oxford', 'T3_US_TACC', 'T2_CH_CERN', 'T2_BR_UERJ', 'T3_MX_Cinvestav', 'T3_US_FNALLPC', 'T3_RU_FIAN', 'T3_CH_CERN_DOMA', 'T2_ES_IFCA', 'T3_ES_Oviedo', 'T3_US_NotreDame', 'T2_DE_DESY', 'T3_HU_Debrecen', 'T2_US_Caltech', 'T3_US_VC3_NotreDame', 'T3_FR_IPNL', 'T3_BG_UNI_SOFIA', 'T3_UK_London_RHUL', 'T3_IN_TIFRCloud', 'T3_CN_PKU', 'T2_UK_London_IC', 'T2_US_Nebraska', 'T2_ES_CIEMAT', 'T3_UK_ScotGrid_GLA', 'T2_KR_KISTI', 'T3_KR_UOS', 'T3_IT_Perugia', 'T2_TR_METU', 'T2_AT_Vienna', 'T2_US_Purdue', 'T3_US_Rice', 'T2_TW_NCHC', 'T2_BE_UCL', 'T3_US_FIT', 'T2_UK_SGrid_Bristol', 'T2_PT_NCG_Lisbon', 'T3_US_UMiss', 'T2_IT_Legnaro', 'T2_RU_ITEP', 'T3_US_SDSC', 'T2_RU_JINR', 'T2_IT_Pisa', 'T2_GR_Ioannina', 'T3_US_MIT', 'T2_CH_CERN_HLT', 'T2_FR_GRIF_IRFU', 'T3_US_NERSC', 'T2_FR_CCIN2P3', 'T2_US_MIT', 'T2_BE_IIHE', 'T2_RU_INR', 'T2_PL_Swierk', 'T3_CH_PSI', 'T3_IT_Bologna']", u'[]', u'FileBased', u"{'splitOnRun': False, 'halt_job_on_file_boundaries': False, 'files_per_job': 1, 'runs': [], 'lumis': []}", u'fb53c35d6c0193bac07889c3ca982bedc481ef263e4ee312073afb7780922e6d.tar.gz', u'https://cmsweb.cern.ch:8443/crabcache', u'ardas', u'/DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=ardas/CN=845460/CN=Archan Das', u'cms', u'None', u'None', u'RunIISummer20UL18_SIM-00000000000000000000000000000000', u'F', u'T3_US_FNALLPC', u'https://cmsweb.cern.ch/dbs/prod/phys03/DBSReader', u'https://cmsweb.cern.ch/dbs/prod/phys03/DBSWriter', u'T', u'[]', u'[]', u"['SIM.root']", u'Analysis', u'pythia', u'None', u'{}', u'[]', u'T', u'crab-prod-tw01', u'[]', u'1250', u'4', u'4000', u'10', u"['/GEN_Hpp_NEW_test/ardas-RunIISummer20UL18_SIM-128efeffab8ceb577467d0e58be013b1/USER']", u'["The following sites from the user site whitelist are blacklisted by the CRAB server: [u\'T2_BR_UERJ\', u\'T3_US_UCR\', u\'T3_US_FNALLPC\', u\'T3_FR_IPNL\', u\'T3_CN_PKU\', u\'T3_RU_FIAN\', u\'T3_US_PSC\', u\'T3_US_UMiss\', u\'T3_US_NotreDame\', u\'T2_RU_SINP\', u\'T3_US_SDSC\', u\'T3_IN_PUHEP\', u\'T3_US_OSG\', u\'T2_GR_Ioannina\', u\'T3_US_MIT\', u\'T2_CH_CERN_HLT\', u\'T3_US_Kansas\', u\'T3_US_Princeton_ICSE\', u\'T3_US_NERSC\', u\'T3_GR_IASA\', u\'T3_TW_NTU_HEP\', u\'T3_US_Rutgers\', u\'T3_IT_MIB\', u\'T2_RU_ITEP\', u\'T3_US_JHU\', u\'T3_BY_NCPHEP\', u\'T3_US_TACC\', u\'T3_KR_UOS\', u\'T3_CH_PSI\', u\'T3_IN_TIFRCloud\']. Since the CRAB server blacklist has precedence, these sites are not considered in the user whitelist."]', u'http://vocms0196.cern.ch/mon/cms009/210309_152709:ardas_crab_SIM_Hplusplus_M800_13TeV_test4', u'None', u'[]', u'[]', u'https://cmsweb.cern.ch/crabserver/prod', u'cmsgwms-collector-global.cern.ch:9620,cmsgwms-collector-global.fnal.gov', u'crab3@vocms0196.cern.ch', u'F', u'[]', u'T', u'/store/user/ardas/', u'T', u'None', u'F', u'None', u'GEN_Hpp_NEW_test', u'None', u'979446cbbff9705eb4570a8bd9af36a67b0a5c07e53dd7934a09b5e701189849.tar.gz', u'62431218', u'filetransfers', u'F', u'188.185.120.166', u'0.0', u'None'], u'desc': {u'columns': [u'tm_taskname', u'tm_activity', u'panda_jobset_id', u'tm_task_status', u'tm_task_command', u'tm_start_time', u'tm_start_injection', u'tm_end_injection', u'tm_task_failure', u'tm_job_sw', u'tm_job_arch', u'tm_input_dataset', u'tm_nonvalid_input_dataset', u'tm_use_parent', u'tm_site_whitelist', u'tm_site_blacklist', u'tm_split_algo', u'tm_split_args', u'tm_user_sandbox', u'tm_cache_url', u'tm_username', u'tm_user_dn', u'tm_user_vo', u'tm_user_role', u'tm_user_group', u'tm_publish_name', u'tm_publish_groupname', u'tm_asyncdest', u'tm_dbs_url', u'tm_publish_dbs_url', u'tm_publication', u'tm_outfiles', u'tm_tfile_outfiles', u'tm_edm_outfiles', u'tm_job_type', u'tm_generator', u'tm_events_per_lumi', u'tm_arguments', u'panda_resubmitted_jobs', u'tm_save_logs', u'tw_name', u'tm_user_infiles', u'tm_maxjobruntime', u'tm_numcores', u'tm_maxmemory', u'tm_priority', u'tm_output_dataset', u'tm_task_warnings', u'tm_user_webdir', u'tm_scriptexe', u'tm_scriptargs', u'tm_extrajdl', u'tm_asourl', u'tm_collector', u'tm_schedd', u'tm_dry_run', u'tm_user_files', u'tm_transfer_outputs', u'tm_output_lfn', u'tm_ignore_locality', u'tm_fail_limit', u'tm_one_event_mode', u'tm_secondary_input_dataset', u'tm_primary_dataset', u'tm_last_publication', u'tm_debug_files', u'clusterid', u'tm_asodb', u'tm_ignore_global_blacklist', u'tm_submitter_ip_addr', u'tm_totalunits', u'tm_ddm_reqid']}}
+INFO 2021-03-09 17:14:31.976 UTC: 	 CRAB project directory:		/uscms_data/d3/adas2/pythia-stuff/EXO-MCsampleProductions/FullSimulation/RunIISummer20UL18/SIM__CMSSW_10_6_17_patch1/src/inputs/SIM_Hplusplus_M800_13TeV_test4/crab_projects/crab_SIM_Hplusplus_M800_13TeV_test4
+INFO 2021-03-09 17:14:31.976 UTC: 	 Task name:			210309_152709:ardas_crab_SIM_Hplusplus_M800_13TeV_test4
+INFO 2021-03-09 17:14:31.976 UTC: 	 Grid scheduler - Task Worker:	crab3@vocms0196.cern.ch - crab-prod-tw01
+INFO 2021-03-09 17:14:31.976 UTC: 	 Status on the CRAB server:	SUBMITTED
+INFO 2021-03-09 17:14:31.977 UTC: 	 Task URL to use for HELP:	https://cmsweb-k8s-prod.cern.ch/crabserver/ui/task/210309_152709%3Aardas_crab_SIM_Hplusplus_M800_13TeV_test4
+INFO 2021-03-09 17:14:31.984 UTC: 	 Dashboard monitoring URL:	https://monit-grafana.cern.ch/d/cmsTMDetail/cms-task-monitoring-task-view?orgId=11&var-user=ardas&var-task=210309_152709%3Aardas_crab_SIM_Hplusplus_M800_13TeV_test4&from=1615300029000&to=now
+INFO 2021-03-09 17:14:31.984 UTC: 	 In case of issues with the dashboard, please provide feedback to hn-cms-computing-tools@cern.ch
+WARNING 2021-03-09 17:14:31.984 UTC: 	 Warning:			The following sites from the user site whitelist are blacklisted by the CRAB server: [u'T2_BR_UERJ', u'T3_US_UCR', u'T3_US_FNALLPC', u'T3_FR_IPNL', u'T3_CN_PKU', u'T3_RU_FIAN', u'T3_US_PSC', u'T3_US_UMiss', u'T3_US_NotreDame', u'T2_RU_SINP', u'T3_US_SDSC', u'T3_IN_PUHEP', u'T3_US_OSG', u'T2_GR_Ioannina', u'T3_US_MIT', u'T2_CH_CERN_HLT', u'T3_US_Kansas', u'T3_US_Princeton_ICSE', u'T3_US_NERSC', u'T3_GR_IASA', u'T3_TW_NTU_HEP', u'T3_US_Rutgers', u'T3_IT_MIB', u'T2_RU_ITEP', u'T3_US_JHU', u'T3_BY_NCPHEP', u'T3_US_TACC', u'T3_KR_UOS', u'T3_CH_PSI', u'T3_IN_TIFRCloud']. Since the CRAB server blacklist has precedence, these sites are not considered in the user whitelist.
+DEBUG 2021-03-09 17:14:31.984 UTC: 	 The CRAB server submitted your task to the Grid scheduler (cluster ID: 62431218)
+DEBUG 2021-03-09 17:14:31.984 UTC: 	 Webdir is located at http://vocms0196.cern.ch/mon/cms009/210309_152709:ardas_crab_SIM_Hplusplus_M800_13TeV_test4
+DEBUG 2021-03-09 17:14:32.571 UTC: 	 Proxied webdir is located at https://cmsweb.cern.ch:8443/scheddmon/0196/cms009/210309_152709:ardas_crab_SIM_Hplusplus_M800_13TeV_test4
+DEBUG 2021-03-09 17:14:32.571 UTC: 	 Retrieving 'status_cache' file from https://cmsweb.cern.ch:8443/scheddmon/0196/cms009/210309_152709:ardas_crab_SIM_Hplusplus_M800_13TeV_test4/status_cache
+DEBUG 2021-03-09 17:14:33.148 UTC: 	 Got information from status cache file: {'11': {'Retries': 0, 'WallDurations': [8.0, 193.29563403129578, 4535.0], 'StartTimes': [1615303861.0], 'SubmitTimes': [1615303683.0], 'JobIds': ['62431236.0'], 'EndTimes': [1615308396.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'transferring', 'ResidentSetSize': [1166604], 'TotalUserCpuTimeHistory': [17314], 'SiteHistory': ['Unknown', 'T2_US_MIT', 'T2_US_MIT'], 'TotalSysCpuTimeHistory': [147]}, '10': {'Retries': 0, 'WallDurations': [9.0, 190.29563403129578, 5417.0], 'StartTimes': [1615303864.0], 'SubmitTimes': [1615303683.0], 'JobIds': ['62431233.0'], 'EndTimes': [], 'Restarts': 0, 'RecordedSite': True, 'State': 'running', 'ResidentSetSize': [1229920], 'TotalUserCpuTimeHistory': [20169.0], 'SiteHistory': ['Unknown', 'T2_US_UCSD', 'T2_US_UCSD'], 'TotalSysCpuTimeHistory': [174.0]}, '13': {'Retries': 0, 'WallDurations': [9.0, 193.29563403129578, 5041.0], 'StartTimes': [1615303861.0], 'SubmitTimes': [1615303683.0], 'JobIds': ['62431241.0'], 'EndTimes': [1615308902.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'transferring', 'ResidentSetSize': [1258244], 'TotalUserCpuTimeHistory': [19206], 'SiteHistory': ['Unknown', 'T2_US_Wisconsin', 'T2_US_Wisconsin'], 'TotalSysCpuTimeHistory': [177]}, '12': {'Retries': 0, 'WallDurations': [8.0, 190.29563403129578, 3851.0], 'StartTimes': [1615303864.0], 'SubmitTimes': [1615303683.0], 'JobIds': ['62431238.0'], 'EndTimes': [1615307715.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'finished', 'ResidentSetSize': [1039560], 'TotalUserCpuTimeHistory': [14049], 'SiteHistory': ['Unknown', 'T2_US_UCSD', 'T2_US_UCSD'], 'TotalSysCpuTimeHistory': [245]}, '15': {'Retries': 0, 'WallDurations': [8.0, 193.29563403129578, 5465.0], 'StartTimes': [1615303861.0], 'SubmitTimes': [1615303684.0], 'JobIds': ['62431244.0'], 'EndTimes': [1615309326.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'transferring', 'ResidentSetSize': [1031192], 'TotalUserCpuTimeHistory': [20222], 'SiteHistory': ['Unknown', 'T2_US_MIT', 'T2_US_MIT'], 'TotalSysCpuTimeHistory': [256]}, '14': {'Retries': 0, 'WallDurations': [8.0, 193.29563403129578, 4925.0], 'StartTimes': [1615303861.0], 'SubmitTimes': [1615303683.0], 'JobIds': ['62431242.0'], 'EndTimes': [1615308786.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'transferring', 'ResidentSetSize': [1097500], 'TotalUserCpuTimeHistory': [18613], 'SiteHistory': ['Unknown', 'T2_US_MIT', 'T2_US_MIT'], 'TotalSysCpuTimeHistory': [291]}, '17': {'Retries': 0, 'WallDurations': [8.0, 192.29563403129578, 4901.0], 'StartTimes': [1615303862.0], 'SubmitTimes': [1615303684.0], 'JobIds': ['62431248.0'], 'EndTimes': [1615308763.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'transferring', 'ResidentSetSize': [1119588], 'TotalUserCpuTimeHistory': [18530], 'SiteHistory': ['Unknown', 'T2_US_MIT', 'T2_US_MIT'], 'TotalSysCpuTimeHistory': [275]}, '16': {'Retries': 0, 'WallDurations': [8.0, 192.29563403129578, 5381.0], 'StartTimes': [1615303862.0], 'SubmitTimes': [1615303684.0], 'JobIds': ['62431246.0'], 'EndTimes': [1615309243.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'transferring', 'ResidentSetSize': [1082056], 'TotalUserCpuTimeHistory': [20497], 'SiteHistory': ['Unknown', 'T2_US_MIT', 'T2_US_MIT'], 'TotalSysCpuTimeHistory': [188]}, '19': {'Retries': 0, 'WallDurations': [8.0, 192.29563403129578, 5049.0], 'StartTimes': [1615303862.0], 'SubmitTimes': [1615303684.0], 'JobIds': ['62431251.0'], 'EndTimes': [1615308911.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'transferring', 'ResidentSetSize': [1215608], 'TotalUserCpuTimeHistory': [19004], 'SiteHistory': ['Unknown', 'T2_US_MIT', 'T2_US_MIT'], 'TotalSysCpuTimeHistory': [291]}, '18': {'Retries': 0, 'WallDurations': [10.0, 193.29563403129578, 4505.0], 'StartTimes': [1615303861.0], 'SubmitTimes': [1615303684.0], 'JobIds': ['62431249.0'], 'EndTimes': [1615308366.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'transferring', 'ResidentSetSize': [1148648], 'TotalUserCpuTimeHistory': [17314], 'SiteHistory': ['Unknown', 'T2_US_MIT', 'T2_US_MIT'], 'TotalSysCpuTimeHistory': [135]}, '1': {'Retries': 0, 'WallDurations': [9.0, 193.29563403129578, 5430.0], 'StartTimes': [1615303861.0], 'SubmitTimes': [1615303676.0], 'JobIds': ['62431220.0'], 'EndTimes': [1615309291.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'transferring', 'ResidentSetSize': [1016164], 'TotalUserCpuTimeHistory': [20224], 'SiteHistory': ['Unknown', 'T2_US_MIT', 'T2_US_MIT'], 'TotalSysCpuTimeHistory': [224]}, '3': {'Retries': 0, 'WallDurations': [9.0, 192.29563403129578, 4803.0], 'StartTimes': [1615303862.0], 'SubmitTimes': [1615303677.0], 'JobIds': ['62431222.0'], 'EndTimes': [1615308665.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'transferring', 'ResidentSetSize': [1106844], 'TotalUserCpuTimeHistory': [18127], 'SiteHistory': ['Unknown', 'T2_US_MIT', 'T2_US_MIT'], 'TotalSysCpuTimeHistory': [266]}, '2': {'Retries': 0, 'WallDurations': [9.0, 192.29563403129578, 4904.0], 'StartTimes': [1615303862.0], 'SubmitTimes': [1615303676.0], 'JobIds': ['62431221.0'], 'EndTimes': [1615308766.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'transferring', 'ResidentSetSize': [1191404], 'TotalUserCpuTimeHistory': [18676], 'SiteHistory': ['Unknown', 'T2_US_Wisconsin', 'T2_US_Wisconsin'], 'TotalSysCpuTimeHistory': [182]}, '5': {'Retries': 0, 'WallDurations': [9.0, 192.29563403129578, 5373.0], 'StartTimes': [1615303862.0], 'SubmitTimes': [1615303677.0], 'JobIds': ['62431224.0'], 'EndTimes': [1615309235.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'transferring', 'ResidentSetSize': [1058128], 'TotalUserCpuTimeHistory': [20557], 'SiteHistory': ['Unknown', 'T2_US_MIT', 'T2_US_MIT'], 'TotalSysCpuTimeHistory': [112]}, '4': {'Retries': 0, 'WallDurations': [8.0, 189.29563403129578, 5530.0], 'StartTimes': [1615303865.0], 'SubmitTimes': [1615303677.0], 'JobIds': ['62431223.0'], 'EndTimes': [1615309395.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'transferring', 'ResidentSetSize': [1286708], 'TotalUserCpuTimeHistory': [20809], 'SiteHistory': ['Unknown', 'T2_US_UCSD', 'T2_US_UCSD'], 'TotalSysCpuTimeHistory': [187]}, '7': {'Retries': 0, 'WallDurations': [10.0, 190.29563403129578, 5100.0], 'StartTimes': [1615303864.0], 'SubmitTimes': [1615303682.0], 'JobIds': ['62431227.0'], 'EndTimes': [1615308964.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'transferring', 'ResidentSetSize': [1189776], 'TotalUserCpuTimeHistory': [18797], 'SiteHistory': ['Unknown', 'T2_US_UCSD', 'T2_US_UCSD'], 'TotalSysCpuTimeHistory': [236]}, '6': {'Retries': 0, 'WallDurations': [9.0, 184.29563403129578, 5720.0], 'StartTimes': [1615303870.0], 'SubmitTimes': [1615303682.0], 'JobIds': ['62431225.0'], 'EndTimes': [], 'Restarts': 0, 'RecordedSite': True, 'State': 'running', 'ResidentSetSize': [1155716], 'TotalUserCpuTimeHistory': [21229.0], 'SiteHistory': ['Unknown', 'T2_US_Caltech', 'T2_US_Caltech'], 'TotalSysCpuTimeHistory': [411.0]}, '9': {'Retries': 0, 'WallDurations': [10.0, 194.29563403129578, 4806.0], 'StartTimes': [1615303860.0], 'SubmitTimes': [1615303683.0], 'JobIds': ['62431231.0'], 'EndTimes': [1615308666.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'transferring', 'ResidentSetSize': [1102256], 'TotalUserCpuTimeHistory': [17818], 'SiteHistory': ['Unknown', 'T2_US_MIT', 'T2_US_MIT'], 'TotalSysCpuTimeHistory': [256]}, '20': {'Retries': 0, 'WallDurations': [8.0, 192.29563403129578, 4922.0], 'StartTimes': [1615303862.0], 'SubmitTimes': [1615303684.0], 'JobIds': ['62431253.0'], 'EndTimes': [1615308784.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'transferring', 'ResidentSetSize': [1135372], 'TotalUserCpuTimeHistory': [18497], 'SiteHistory': ['Unknown', 'T2_US_MIT', 'T2_US_MIT'], 'TotalSysCpuTimeHistory': [223]}, '8': {'Retries': 0, 'WallDurations': [8.0, 191.29563403129578, 4069.0], 'StartTimes': [1615303863.0], 'SubmitTimes': [1615303683.0], 'JobIds': ['62431229.0'], 'EndTimes': [1615307932.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'finished', 'ResidentSetSize': [1131580], 'TotalUserCpuTimeHistory': [15003], 'SiteHistory': ['Unknown', 'T2_US_Purdue', 'T2_US_Purdue'], 'TotalSysCpuTimeHistory': [177]}}
+INFO 2021-03-09 17:14:33.148 UTC: 	 Status on the scheduler:	SUBMITTED
+INFO 2021-03-09 17:14:33.148 UTC: 	 
+Jobs status:                    finished     		 10.0% ( 2/20)
+INFO 2021-03-09 17:14:33.148 UTC: 	 				running      		 10.0% ( 2/20)
+INFO 2021-03-09 17:14:33.148 UTC: 	 				transferring 		 80.0% (16/20)
+INFO 2021-03-09 17:14:33.714 UTC: 	 
+Publication status of 1 dataset(s):	new          		 10.0% ( 2/20)
+(from CRAB internal bookkeeping in transferdb)
+					unsubmitted  		 90.0% (18/20)
+INFO 2021-03-09 17:14:33.715 UTC: 	 
+Output dataset:			/GEN_Hpp_NEW_test/ardas-RunIISummer20UL18_SIM-128efeffab8ceb577467d0e58be013b1/USER
+Output dataset DAS URL:		https://cmsweb.cern.ch/das/request?input=%2FGEN_Hpp_NEW_test%2Fardas-RunIISummer20UL18_SIM-128efeffab8ceb577467d0e58be013b1%2FUSER&instance=prod%2Fphys03
+INFO 2021-03-09 17:14:33.715 UTC: 	 
+Warning: the max jobs runtime is less than 30% of the task requested value (1250 min), please consider to request a lower value for failed jobs (allowed through crab resubmit) and/or improve the jobs splitting (e.g. config.Data.splitting = 'Automatic') in a new task.
+INFO 2021-03-09 17:14:33.715 UTC: 	 
+Warning: the max jobs memory is less than 70% of the task requested value (4000 MB), please consider to request a lower value for failed jobs (allowed through crab resubmit) and/or improve the jobs splitting (e.g. config.Data.splitting = 'Automatic') in a new task.
+INFO 2021-03-09 17:14:33.715 UTC: 	 
+Summary of run jobs:
+ * Memory: 992MB min, 1256MB max, 1106MB ave
+ * Runtime: 1:04:11 min, 1:32:10 max, 1:22:01 ave
+ * CPU eff: 93% min, 97% max, 95% ave
+ * Waste: 1:00:16 (4% of total)
+
+INFO 2021-03-09 17:14:33.717 UTC: 	 Log file is /uscms_data/d3/adas2/pythia-stuff/EXO-MCsampleProductions/FullSimulation/RunIISummer20UL18/SIM__CMSSW_10_6_17_patch1/src/inputs/SIM_Hplusplus_M800_13TeV_test4/crab_projects/crab_SIM_Hplusplus_M800_13TeV_test4/crab.log
+DEBUG 2021-03-10 17:51:02.281 UTC: 	 CRAB Client version: v3.201110
+DEBUG 2021-03-10 17:51:02.282 UTC: 	 Running on: Linux cmslpc154.fnal.gov 3.10.0-1160.6.1.el7.x86_64 #1 SMP Tue Nov 10 08:19:23 CST 2020 x86_64 x86_64 x86_64 GNU/Linux - Scientific Linux 7.9 (Nitrogen)
+DEBUG 2021-03-10 17:51:02.282 UTC: 	 Executing command: 'status'
+DEBUG 2021-03-10 17:51:02.282 UTC: 	 Found CRAB cache file /uscms/home/adas2/.crab3
+DEBUG 2021-03-10 17:51:02.345 UTC: 	 Checking credentials
+DEBUG 2021-03-10 17:51:02.345 UTC: 	 Found proxy file /uscms/home/adas2/x509up_u56079
+DEBUG 2021-03-10 17:51:02.345 UTC: 	 Getting proxy life time left
+DEBUG 2021-03-10 17:51:02.449 UTC: 	 Executing : 
+ command : voms-proxy-info -file /uscms/home/adas2/x509up_u56079 -timeleft
+ output : 0
+
+ error: 
+ retcode : 0
+DEBUG 2021-03-10 17:51:02.449 UTC: 	 Proxy valid for 00:00:00 hours
+DEBUG 2021-03-10 17:51:02.449 UTC: 	 Creating new proxy for 172:00 hours with VO group '' and VO role 'NULL'.
+DEBUG 2021-03-10 17:51:11.369 UTC: 	 Executing : 
+ command : voms-proxy-init -voms cms:/cms -valid 172:00 -rfc
+ output : None
+ error: None
+ retcode : 0
+DEBUG 2021-03-10 17:51:11.473 UTC: 	 Executing : 
+ command : voms-proxy-info -file /uscms/home/adas2/x509up_u56079 -timeleft
+ output : 619200
+
+ error: 
+ retcode : 0
+DEBUG 2021-03-10 17:51:11.578 UTC: 	 Executing : 
+ command : voms-proxy-info -file /uscms/home/adas2/x509up_u56079 -actimeleft
+ output : 619200
+
+ error: 
+ retcode : 0
+DEBUG 2021-03-10 17:51:11.682 UTC: 	 Executing : 
+ command : env X509_USER_PROXY=/uscms/home/adas2/x509up_u56079 voms-proxy-info -fqan
+ output : /cms/Role=NULL/Capability=NULL
+
+ error: 
+ retcode : 0
+DEBUG 2021-03-10 17:51:11.682 UTC: 	 Proxy created.
+DEBUG 2021-03-10 17:51:12.257 UTC: 	 Registering user credentials for server /DC=ch/DC=cern/OU=computers/CN=vocms0105.cern.ch|/DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod|dev)-tw(02|01).cern.ch|/DC=ch/DC=cern/OU=computers/CN=(ddi|ddidk|mytw).cern.ch|/DC=ch/DC=cern/OU=computers/CN=stefanov(m|m2).cern.ch
+DEBUG 2021-03-10 17:51:12.370 UTC: 	 Executing : 
+ command : voms-proxy-info -file /uscms/home/adas2/x509up_u56079 -identity
+ output : /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=ardas/CN=845460/CN=Archan Das
+
+ error: 
+ retcode : 0
+DEBUG 2021-03-10 17:51:12.376 UTC: 	 Getting myproxy life time left for myproxy.cern.ch
+DEBUG 2021-03-10 17:51:12.376 UTC: 	 using 72d5c825fb94b0149673ac71b8d91bbefac4ebde as credential login name
+DEBUG 2021-03-10 17:51:13.383 UTC: 	 Executing : 
+ command : myproxy-info -l 72d5c825fb94b0149673ac71b8d91bbefac4ebde -s myproxy.cern.ch
+ output : username: 72d5c825fb94b0149673ac71b8d91bbefac4ebde
+owner: /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=ardas/CN=845460/CN=Archan Das
+  renewal policy: /DC=ch/DC=cern/OU=computers/CN=vocms0105.cern.ch|/DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod|dev)-tw(02|01).cern.ch|/DC=ch/DC=cern/OU=computers/CN=(ddi|ddidk|mytw).cern.ch|/DC=ch/DC=cern/OU=computers/CN=stefanov(m|m2).cern.ch
+  trusted retrieval policy: /DC=ch/DC=cern/OU=computers/CN=vocms0105.cern.ch|/DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod|dev)-tw(02|01).cern.ch|/DC=ch/DC=cern/OU=computers/CN=(ddi|ddidk|mytw).cern.ch|/DC=ch/DC=cern/OU=computers/CN=stefanov(m|m2).cern.ch
+  timeleft: 342:48:41  (14.3 days)
+
+ error: 
+ retcode : 0
+DEBUG 2021-03-10 17:51:13.384 UTC: 	 Myproxy is valid: 1234121
+DEBUG 2021-03-10 17:51:13.488 UTC: 	 Executing : 
+ command : openssl x509 -noout -in ~/.globus/usercert.pem -dates
+ output : notBefore=Feb 23 00:03:02 2021 GMT
+notAfter=Mar 30 00:03:02 2022 GMT
+
+ error: 
+ retcode : 0
+DEBUG 2021-03-10 17:51:13.498 UTC: 	 Delegating a myproxy for 720:00 hours
+DEBUG 2021-03-10 17:51:13.498 UTC: 	 using 72d5c825fb94b0149673ac71b8d91bbefac4ebde as credential login name
+DEBUG 2021-03-10 17:51:21.416 UTC: 	 Executing : 
+ command : export GT_PROXY_MODE=rfc ; myproxy-init -d -n -s myproxy.cern.ch -x -R '/DC=ch/DC=cern/OU=computers/CN=vocms0105.cern.ch|/DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod|dev)-tw(02|01).cern.ch|/DC=ch/DC=cern/OU=computers/CN=(ddi|ddidk|mytw).cern.ch|/DC=ch/DC=cern/OU=computers/CN=stefanov(m|m2).cern.ch' -x -Z '/DC=ch/DC=cern/OU=computers/CN=vocms0105.cern.ch|/DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod|dev)-tw(02|01).cern.ch|/DC=ch/DC=cern/OU=computers/CN=(ddi|ddidk|mytw).cern.ch|/DC=ch/DC=cern/OU=computers/CN=stefanov(m|m2).cern.ch' -l '72d5c825fb94b0149673ac71b8d91bbefac4ebde' -t 168:00 -c 720:00
+ output : Your identity: /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=ardas/CN=845460/CN=Archan Das
+Creating proxy ................................................ Done
+Proxy Verify OK
+Your proxy is valid until: Fri Apr  9 12:51:20 2021
+A proxy valid for 720 hours (30.0 days) for user 72d5c825fb94b0149673ac71b8d91bbefac4ebde now exists on myproxy.cern.ch.
+
+ error: 
+ retcode : 0
+DEBUG 2021-03-10 17:51:21.416 UTC: 	 using 72d5c825fb94b0149673ac71b8d91bbefac4ebde as credential login name
+DEBUG 2021-03-10 17:51:22.222 UTC: 	 Executing : 
+ command : myproxy-info -l 72d5c825fb94b0149673ac71b8d91bbefac4ebde -s myproxy.cern.ch
+ output : username: 72d5c825fb94b0149673ac71b8d91bbefac4ebde
+owner: /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=ardas/CN=845460/CN=Archan Das
+  renewal policy: /DC=ch/DC=cern/OU=computers/CN=vocms0105.cern.ch|/DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod|dev)-tw(02|01).cern.ch|/DC=ch/DC=cern/OU=computers/CN=(ddi|ddidk|mytw).cern.ch|/DC=ch/DC=cern/OU=computers/CN=stefanov(m|m2).cern.ch
+  trusted retrieval policy: /DC=ch/DC=cern/OU=computers/CN=vocms0105.cern.ch|/DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod|dev)-tw(02|01).cern.ch|/DC=ch/DC=cern/OU=computers/CN=(ddi|ddidk|mytw).cern.ch|/DC=ch/DC=cern/OU=computers/CN=stefanov(m|m2).cern.ch
+  timeleft: 719:59:58  (30.0 days)
+
+ error: 
+ retcode : 0
+DEBUG 2021-03-10 17:51:22.222 UTC: 	 My-proxy delegated.
+DEBUG 2021-03-10 17:51:22.222 UTC: 	 Retrieving username ...
+DEBUG 2021-03-10 17:51:22.222 UTC: 	 Retrieving username from CRIC...
+DEBUG 2021-03-10 17:51:23.495 UTC: 	 username is ardas
+DEBUG 2021-03-10 17:51:23.501 UTC: 	 Getting myproxy life time left for myproxy.cern.ch
+DEBUG 2021-03-10 17:51:23.501 UTC: 	 using ardas_CRAB as credential login name
+DEBUG 2021-03-10 17:51:24.407 UTC: 	 Executing : 
+ command : myproxy-info -l ardas_CRAB -s myproxy.cern.ch
+ output : username: ardas_CRAB
+owner: /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=ardas/CN=845460/CN=Archan Das
+  renewal policy: /DC=ch/DC=cern/OU=computers/CN=vocms0105.cern.ch|/DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod|dev)-tw(02|01).cern.ch|/DC=ch/DC=cern/OU=computers/CN=(ddi|ddidk|mytw).cern.ch|/DC=ch/DC=cern/OU=computers/CN=stefanov(m|m2).cern.ch
+  trusted retrieval policy: /DC=ch/DC=cern/OU=computers/CN=vocms0105.cern.ch|/DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod|dev)-tw(02|01).cern.ch|/DC=ch/DC=cern/OU=computers/CN=(ddi|ddidk|mytw).cern.ch|/DC=ch/DC=cern/OU=computers/CN=stefanov(m|m2).cern.ch
+  timeleft: 342:48:40  (14.3 days)
+
+ error: 
+ retcode : 0
+DEBUG 2021-03-10 17:51:24.407 UTC: 	 Myproxy is valid: 1234120
+DEBUG 2021-03-10 17:51:24.512 UTC: 	 Executing : 
+ command : openssl x509 -noout -in ~/.globus/usercert.pem -dates
+ output : notBefore=Feb 23 00:03:02 2021 GMT
+notAfter=Mar 30 00:03:02 2022 GMT
+
+ error: 
+ retcode : 0
+DEBUG 2021-03-10 17:51:24.512 UTC: 	 Delegating a myproxy for 720:00 hours
+DEBUG 2021-03-10 17:51:24.512 UTC: 	 using ardas_CRAB as credential login name
+DEBUG 2021-03-10 17:51:29.627 UTC: 	 Executing : 
+ command : export GT_PROXY_MODE=rfc ; myproxy-init -d -n -s myproxy.cern.ch -x -R '/DC=ch/DC=cern/OU=computers/CN=vocms0105.cern.ch|/DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod|dev)-tw(02|01).cern.ch|/DC=ch/DC=cern/OU=computers/CN=(ddi|ddidk|mytw).cern.ch|/DC=ch/DC=cern/OU=computers/CN=stefanov(m|m2).cern.ch' -x -Z '/DC=ch/DC=cern/OU=computers/CN=vocms0105.cern.ch|/DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod|dev)-tw(02|01).cern.ch|/DC=ch/DC=cern/OU=computers/CN=(ddi|ddidk|mytw).cern.ch|/DC=ch/DC=cern/OU=computers/CN=stefanov(m|m2).cern.ch' -l 'ardas_CRAB' -t 168:00 -c 720:00
+ output : Your identity: /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=ardas/CN=845460/CN=Archan Das
+Creating proxy ................................................................................................................. Done
+Proxy Verify OK
+Your proxy is valid until: Fri Apr  9 12:51:28 2021
+A proxy valid for 720 hours (30.0 days) for user ardas_CRAB now exists on myproxy.cern.ch.
+
+ error: 
+ retcode : 0
+DEBUG 2021-03-10 17:51:29.627 UTC: 	 using ardas_CRAB as credential login name
+DEBUG 2021-03-10 17:51:30.434 UTC: 	 Executing : 
+ command : myproxy-info -l ardas_CRAB -s myproxy.cern.ch
+ output : username: ardas_CRAB
+owner: /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=ardas/CN=845460/CN=Archan Das
+  renewal policy: /DC=ch/DC=cern/OU=computers/CN=vocms0105.cern.ch|/DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod|dev)-tw(02|01).cern.ch|/DC=ch/DC=cern/OU=computers/CN=(ddi|ddidk|mytw).cern.ch|/DC=ch/DC=cern/OU=computers/CN=stefanov(m|m2).cern.ch
+  trusted retrieval policy: /DC=ch/DC=cern/OU=computers/CN=vocms0105.cern.ch|/DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod|dev)-tw(02|01).cern.ch|/DC=ch/DC=cern/OU=computers/CN=(ddi|ddidk|mytw).cern.ch|/DC=ch/DC=cern/OU=computers/CN=stefanov(m|m2).cern.ch
+  timeleft: 719:59:58  (30.0 days)
+
+ error: 
+ retcode : 0
+DEBUG 2021-03-10 17:51:30.434 UTC: 	 My-proxy delegated.
+DEBUG 2021-03-10 17:51:30.434 UTC: 	 Result of myproxy credential check:
+  Credential exists on myproxy: username: 72d5c825fb94b0149673ac71b8d91bbefac4ebde  - validity: 29 days, 23:59:58
+  Credential exists on myproxy: username: ardas_CRAB  - validity: 29 days, 23:59:58
+DEBUG 2021-03-10 17:51:30.435 UTC: 	 Command use: status
+DEBUG 2021-03-10 17:51:30.435 UTC: 	 Options use: []
+DEBUG 2021-03-10 17:51:31.053 UTC: 	 CRABClient version: v3.201110
+DEBUG 2021-03-10 17:51:31.053 UTC: 	 Instance is prod
+DEBUG 2021-03-10 17:51:31.053 UTC: 	 Server base url is cmsweb-k8s-prod.cern.ch
+DEBUG 2021-03-10 17:51:31.053 UTC: 	 Command url /crabserver/prod/workflow
+DEBUG 2021-03-10 17:51:31.647 UTC: 	 Got information from server oracle database: {u'result': [u'210309_152709:ardas_crab_SIM_Hplusplus_M800_13TeV_test4', u'None', u'None', u'SUBMITTED', u'SUBMIT', u'2021-03-09 15:27:09.534070', u'None', u'2021-03-09 15:27:50.743279', u'None', u'CMSSW_10_6_17_patch1', u'slc7_amd64_gcc700', u'/GEN_Hpp_NEW_test/ardas-RunIISummer20UL18_GEN-42b65214d01566d851ba74f16b93e2b1/USER', u'F', u'0', u"['T3_US_PuertoRico', 'T3_RU_MEPhI', 'T2_FI_HIP', 'T2_UK_SGrid_RALPP', 'T2_FR_GRIF_LLR', 'T3_US_Baylor', 'T3_UK_London_QMUL', 'T3_TW_NTU_HEP', 'T2_RU_SINP', 'T3_US_UMD', 'T3_US_Colorado', 'T3_US_Kansas', 'T3_GR_IASA', 'T2_IT_Bari', 'T2_US_UCSD', 'T2_RU_IHEP', 'T3_US_JHU', 'T3_BY_NCPHEP', 'T2_US_Vanderbilt', 'T3_US_UCR', 'T3_TW_NCU', 'T2_CH_CSCS', 'T2_UA_KIPT', 'T2_PK_NCP', 'T3_KR_KNU', 'T2_FR_IPHC', 'T3_US_OSU', 'T3_US_TAMU', 'T2_IT_Rome', 'T2_UK_London_Brunel', 'T3_IN_PUHEP', 'T3_US_OSG', 'T3_IT_Trieste', 'T2_EE_Estonia', 'T2_IN_TIFR', 'T2_CN_Beijing', 'T2_US_Florida', 'T3_US_Princeton_ICSE', 'T3_IT_MIB', 'T3_US_PSC', 'T3_US_Rutgers', 'T2_US_Wisconsin', 'T2_HU_Budapest', 'T2_DE_RWTH', 'T2_BR_SPRACE', 'T3_UK_SGrid_Oxford', 'T3_US_TACC', 'T2_CH_CERN', 'T2_BR_UERJ', 'T3_MX_Cinvestav', 'T3_US_FNALLPC', 'T3_RU_FIAN', 'T3_CH_CERN_DOMA', 'T2_ES_IFCA', 'T3_ES_Oviedo', 'T3_US_NotreDame', 'T2_DE_DESY', 'T3_HU_Debrecen', 'T2_US_Caltech', 'T3_US_VC3_NotreDame', 'T3_FR_IPNL', 'T3_BG_UNI_SOFIA', 'T3_UK_London_RHUL', 'T3_IN_TIFRCloud', 'T3_CN_PKU', 'T2_UK_London_IC', 'T2_US_Nebraska', 'T2_ES_CIEMAT', 'T3_UK_ScotGrid_GLA', 'T2_KR_KISTI', 'T3_KR_UOS', 'T3_IT_Perugia', 'T2_TR_METU', 'T2_AT_Vienna', 'T2_US_Purdue', 'T3_US_Rice', 'T2_TW_NCHC', 'T2_BE_UCL', 'T3_US_FIT', 'T2_UK_SGrid_Bristol', 'T2_PT_NCG_Lisbon', 'T3_US_UMiss', 'T2_IT_Legnaro', 'T2_RU_ITEP', 'T3_US_SDSC', 'T2_RU_JINR', 'T2_IT_Pisa', 'T2_GR_Ioannina', 'T3_US_MIT', 'T2_CH_CERN_HLT', 'T2_FR_GRIF_IRFU', 'T3_US_NERSC', 'T2_FR_CCIN2P3', 'T2_US_MIT', 'T2_BE_IIHE', 'T2_RU_INR', 'T2_PL_Swierk', 'T3_CH_PSI', 'T3_IT_Bologna']", u'[]', u'FileBased', u"{'splitOnRun': False, 'halt_job_on_file_boundaries': False, 'files_per_job': 1, 'runs': [], 'lumis': []}", u'fb53c35d6c0193bac07889c3ca982bedc481ef263e4ee312073afb7780922e6d.tar.gz', u'https://cmsweb.cern.ch:8443/crabcache', u'ardas', u'/DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=ardas/CN=845460/CN=Archan Das', u'cms', u'None', u'None', u'RunIISummer20UL18_SIM-00000000000000000000000000000000', u'F', u'T3_US_FNALLPC', u'https://cmsweb.cern.ch/dbs/prod/phys03/DBSReader', u'https://cmsweb.cern.ch/dbs/prod/phys03/DBSWriter', u'T', u'[]', u'[]', u"['SIM.root']", u'Analysis', u'pythia', u'None', u'{}', u'[]', u'T', u'crab-prod-tw01', u'[]', u'1250', u'4', u'4000', u'10', u"['/GEN_Hpp_NEW_test/ardas-RunIISummer20UL18_SIM-128efeffab8ceb577467d0e58be013b1/USER']", u'["The following sites from the user site whitelist are blacklisted by the CRAB server: [u\'T2_BR_UERJ\', u\'T3_US_UCR\', u\'T3_US_FNALLPC\', u\'T3_FR_IPNL\', u\'T3_CN_PKU\', u\'T3_RU_FIAN\', u\'T3_US_PSC\', u\'T3_US_UMiss\', u\'T3_US_NotreDame\', u\'T2_RU_SINP\', u\'T3_US_SDSC\', u\'T3_IN_PUHEP\', u\'T3_US_OSG\', u\'T2_GR_Ioannina\', u\'T3_US_MIT\', u\'T2_CH_CERN_HLT\', u\'T3_US_Kansas\', u\'T3_US_Princeton_ICSE\', u\'T3_US_NERSC\', u\'T3_GR_IASA\', u\'T3_TW_NTU_HEP\', u\'T3_US_Rutgers\', u\'T3_IT_MIB\', u\'T2_RU_ITEP\', u\'T3_US_JHU\', u\'T3_BY_NCPHEP\', u\'T3_US_TACC\', u\'T3_KR_UOS\', u\'T3_CH_PSI\', u\'T3_IN_TIFRCloud\']. Since the CRAB server blacklist has precedence, these sites are not considered in the user whitelist."]', u'http://vocms0196.cern.ch/mon/cms009/210309_152709:ardas_crab_SIM_Hplusplus_M800_13TeV_test4', u'None', u'[]', u'[]', u'https://cmsweb.cern.ch/crabserver/prod', u'cmsgwms-collector-global.cern.ch:9620,cmsgwms-collector-global.fnal.gov', u'crab3@vocms0196.cern.ch', u'F', u'[]', u'T', u'/store/user/ardas/', u'T', u'None', u'F', u'None', u'GEN_Hpp_NEW_test', u'2021-03-09 20:05:00.434211', u'979446cbbff9705eb4570a8bd9af36a67b0a5c07e53dd7934a09b5e701189849.tar.gz', u'62431218', u'filetransfers', u'F', u'188.185.120.166', u'0.0', u'None'], u'desc': {u'columns': [u'tm_taskname', u'tm_activity', u'panda_jobset_id', u'tm_task_status', u'tm_task_command', u'tm_start_time', u'tm_start_injection', u'tm_end_injection', u'tm_task_failure', u'tm_job_sw', u'tm_job_arch', u'tm_input_dataset', u'tm_nonvalid_input_dataset', u'tm_use_parent', u'tm_site_whitelist', u'tm_site_blacklist', u'tm_split_algo', u'tm_split_args', u'tm_user_sandbox', u'tm_cache_url', u'tm_username', u'tm_user_dn', u'tm_user_vo', u'tm_user_role', u'tm_user_group', u'tm_publish_name', u'tm_publish_groupname', u'tm_asyncdest', u'tm_dbs_url', u'tm_publish_dbs_url', u'tm_publication', u'tm_outfiles', u'tm_tfile_outfiles', u'tm_edm_outfiles', u'tm_job_type', u'tm_generator', u'tm_events_per_lumi', u'tm_arguments', u'panda_resubmitted_jobs', u'tm_save_logs', u'tw_name', u'tm_user_infiles', u'tm_maxjobruntime', u'tm_numcores', u'tm_maxmemory', u'tm_priority', u'tm_output_dataset', u'tm_task_warnings', u'tm_user_webdir', u'tm_scriptexe', u'tm_scriptargs', u'tm_extrajdl', u'tm_asourl', u'tm_collector', u'tm_schedd', u'tm_dry_run', u'tm_user_files', u'tm_transfer_outputs', u'tm_output_lfn', u'tm_ignore_locality', u'tm_fail_limit', u'tm_one_event_mode', u'tm_secondary_input_dataset', u'tm_primary_dataset', u'tm_last_publication', u'tm_debug_files', u'clusterid', u'tm_asodb', u'tm_ignore_global_blacklist', u'tm_submitter_ip_addr', u'tm_totalunits', u'tm_ddm_reqid']}}
+INFO 2021-03-10 17:51:31.648 UTC: 	 CRAB project directory:		/uscms_data/d3/adas2/pythia-stuff/EXO-MCsampleProductions/FullSimulation/RunIISummer20UL18/SIM__CMSSW_10_6_17_patch1/src/inputs/SIM_Hplusplus_M800_13TeV_test4/crab_projects/crab_SIM_Hplusplus_M800_13TeV_test4
+INFO 2021-03-10 17:51:31.648 UTC: 	 Task name:			210309_152709:ardas_crab_SIM_Hplusplus_M800_13TeV_test4
+INFO 2021-03-10 17:51:31.648 UTC: 	 Grid scheduler - Task Worker:	crab3@vocms0196.cern.ch - crab-prod-tw01
+INFO 2021-03-10 17:51:31.648 UTC: 	 Status on the CRAB server:	SUBMITTED
+INFO 2021-03-10 17:51:31.648 UTC: 	 Task URL to use for HELP:	https://cmsweb-k8s-prod.cern.ch/crabserver/ui/task/210309_152709%3Aardas_crab_SIM_Hplusplus_M800_13TeV_test4
+INFO 2021-03-10 17:51:31.650 UTC: 	 Dashboard monitoring URL:	https://monit-grafana.cern.ch/d/cmsTMDetail/cms-task-monitoring-task-view?orgId=11&var-user=ardas&var-task=210309_152709%3Aardas_crab_SIM_Hplusplus_M800_13TeV_test4&from=1615300029000&to=now
+INFO 2021-03-10 17:51:31.650 UTC: 	 In case of issues with the dashboard, please provide feedback to hn-cms-computing-tools@cern.ch
+WARNING 2021-03-10 17:51:31.650 UTC: 	 Warning:			The following sites from the user site whitelist are blacklisted by the CRAB server: [u'T2_BR_UERJ', u'T3_US_UCR', u'T3_US_FNALLPC', u'T3_FR_IPNL', u'T3_CN_PKU', u'T3_RU_FIAN', u'T3_US_PSC', u'T3_US_UMiss', u'T3_US_NotreDame', u'T2_RU_SINP', u'T3_US_SDSC', u'T3_IN_PUHEP', u'T3_US_OSG', u'T2_GR_Ioannina', u'T3_US_MIT', u'T2_CH_CERN_HLT', u'T3_US_Kansas', u'T3_US_Princeton_ICSE', u'T3_US_NERSC', u'T3_GR_IASA', u'T3_TW_NTU_HEP', u'T3_US_Rutgers', u'T3_IT_MIB', u'T2_RU_ITEP', u'T3_US_JHU', u'T3_BY_NCPHEP', u'T3_US_TACC', u'T3_KR_UOS', u'T3_CH_PSI', u'T3_IN_TIFRCloud']. Since the CRAB server blacklist has precedence, these sites are not considered in the user whitelist.
+DEBUG 2021-03-10 17:51:31.650 UTC: 	 The CRAB server submitted your task to the Grid scheduler (cluster ID: 62431218)
+DEBUG 2021-03-10 17:51:31.650 UTC: 	 Webdir is located at http://vocms0196.cern.ch/mon/cms009/210309_152709:ardas_crab_SIM_Hplusplus_M800_13TeV_test4
+DEBUG 2021-03-10 17:51:32.250 UTC: 	 Proxied webdir is located at https://cmsweb.cern.ch:8443/scheddmon/0196/cms009/210309_152709:ardas_crab_SIM_Hplusplus_M800_13TeV_test4
+DEBUG 2021-03-10 17:51:32.250 UTC: 	 Retrieving 'status_cache' file from https://cmsweb.cern.ch:8443/scheddmon/0196/cms009/210309_152709:ardas_crab_SIM_Hplusplus_M800_13TeV_test4/status_cache
+DEBUG 2021-03-10 17:51:32.828 UTC: 	 Got information from status cache file: {'11': {'Retries': 0, 'WallDurations': [8.0, 193.29563403129578, 4535.0], 'StartTimes': [1615303861.0], 'SubmitTimes': [1615303683.0], 'JobIds': ['62431236.0'], 'EndTimes': [1615308396.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'finished', 'ResidentSetSize': [1166604], 'TotalUserCpuTimeHistory': [17314], 'SiteHistory': ['Unknown', 'T2_US_MIT', 'T2_US_MIT'], 'TotalSysCpuTimeHistory': [147]}, '10': {'Retries': 0, 'WallDurations': [9.0, 190.29563403129578, 5931.0], 'StartTimes': [1615303864.0], 'SubmitTimes': [1615303683.0], 'JobIds': ['62431233.0'], 'EndTimes': [1615309795.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'finished', 'ResidentSetSize': [1229920], 'TotalUserCpuTimeHistory': [21877], 'SiteHistory': ['Unknown', 'T2_US_UCSD', 'T2_US_UCSD'], 'TotalSysCpuTimeHistory': [183]}, '13': {'Retries': 0, 'WallDurations': [9.0, 193.29563403129578, 5041.0], 'StartTimes': [1615303861.0], 'SubmitTimes': [1615303683.0], 'JobIds': ['62431241.0'], 'EndTimes': [1615308902.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'finished', 'ResidentSetSize': [1258244], 'TotalUserCpuTimeHistory': [19206], 'SiteHistory': ['Unknown', 'T2_US_Wisconsin', 'T2_US_Wisconsin'], 'TotalSysCpuTimeHistory': [177]}, '12': {'Retries': 0, 'WallDurations': [8.0, 190.29563403129578, 3851.0], 'StartTimes': [1615303864.0], 'SubmitTimes': [1615303683.0], 'JobIds': ['62431238.0'], 'EndTimes': [1615307715.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'finished', 'ResidentSetSize': [1039560], 'TotalUserCpuTimeHistory': [14049], 'SiteHistory': ['Unknown', 'T2_US_UCSD', 'T2_US_UCSD'], 'TotalSysCpuTimeHistory': [245]}, '15': {'Retries': 0, 'WallDurations': [8.0, 193.29563403129578, 5465.0], 'StartTimes': [1615303861.0], 'SubmitTimes': [1615303684.0], 'JobIds': ['62431244.0'], 'EndTimes': [1615309326.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'finished', 'ResidentSetSize': [1031192], 'TotalUserCpuTimeHistory': [20222], 'SiteHistory': ['Unknown', 'T2_US_MIT', 'T2_US_MIT'], 'TotalSysCpuTimeHistory': [256]}, '14': {'Retries': 1, 'WallDurations': [8.0, 193.29563403129578, 4925.0, 9.0, 63.86881709098816, 6874.0], 'StartTimes': [1615303861.0, 1615310923.0], 'SubmitTimes': [1615303683.0, 1615310658.0], 'JobIds': ['62431242.0', '62436385.0'], 'EndTimes': [1615308786.0, 1615317797.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'finished', 'ResidentSetSize': [1097500, 1089944], 'TotalUserCpuTimeHistory': [18613, 26291], 'SiteHistory': ['Unknown', 'T2_US_MIT', 'T2_US_MIT', 'Unknown', 'T2_RU_IHEP', 'T2_RU_IHEP'], 'TotalSysCpuTimeHistory': [291, 125]}, '17': {'Retries': 0, 'WallDurations': [8.0, 192.29563403129578, 4901.0], 'StartTimes': [1615303862.0], 'SubmitTimes': [1615303684.0], 'JobIds': ['62431248.0'], 'EndTimes': [1615308763.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'finished', 'ResidentSetSize': [1119588], 'TotalUserCpuTimeHistory': [18530], 'SiteHistory': ['Unknown', 'T2_US_MIT', 'T2_US_MIT'], 'TotalSysCpuTimeHistory': [275]}, '16': {'Retries': 0, 'WallDurations': [8.0, 192.29563403129578, 5381.0], 'StartTimes': [1615303862.0], 'SubmitTimes': [1615303684.0], 'JobIds': ['62431246.0'], 'EndTimes': [1615309243.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'finished', 'ResidentSetSize': [1082056], 'TotalUserCpuTimeHistory': [20497], 'SiteHistory': ['Unknown', 'T2_US_MIT', 'T2_US_MIT'], 'TotalSysCpuTimeHistory': [188]}, '19': {'Retries': 0, 'WallDurations': [8.0, 192.29563403129578, 5049.0], 'StartTimes': [1615303862.0], 'SubmitTimes': [1615303684.0], 'JobIds': ['62431251.0'], 'EndTimes': [1615308911.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'finished', 'ResidentSetSize': [1215608], 'TotalUserCpuTimeHistory': [19004], 'SiteHistory': ['Unknown', 'T2_US_MIT', 'T2_US_MIT'], 'TotalSysCpuTimeHistory': [291]}, '18': {'Retries': 0, 'WallDurations': [10.0, 193.29563403129578, 4505.0], 'StartTimes': [1615303861.0], 'SubmitTimes': [1615303684.0], 'JobIds': ['62431249.0'], 'EndTimes': [1615308366.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'finished', 'ResidentSetSize': [1148648], 'TotalUserCpuTimeHistory': [17314], 'SiteHistory': ['Unknown', 'T2_US_MIT', 'T2_US_MIT'], 'TotalSysCpuTimeHistory': [135]}, '1': {'Retries': 1, 'WallDurations': [9.0, 193.29563403129578, 5430.0, 8.0, 224.12879395484924, 3540.0], 'StartTimes': [1615303861.0, 1615311367.0], 'SubmitTimes': [1615303676.0, 1615311164.0], 'JobIds': ['62431220.0', '62436501.0'], 'EndTimes': [1615309291.0, 1615314907.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'finished', 'ResidentSetSize': [1016164, 1110932], 'TotalUserCpuTimeHistory': [20224, 13106], 'SiteHistory': ['Unknown', 'T2_US_MIT', 'T2_US_MIT', 'Unknown', 'T2_UK_SGrid_Bristol', 'T2_UK_SGrid_Bristol'], 'TotalSysCpuTimeHistory': [224, 266]}, '3': {'Retries': 0, 'WallDurations': [9.0, 192.29563403129578, 4803.0], 'StartTimes': [1615303862.0], 'SubmitTimes': [1615303677.0], 'JobIds': ['62431222.0'], 'EndTimes': [1615308665.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'finished', 'ResidentSetSize': [1106844], 'TotalUserCpuTimeHistory': [18127], 'SiteHistory': ['Unknown', 'T2_US_MIT', 'T2_US_MIT'], 'TotalSysCpuTimeHistory': [266]}, '2': {'Retries': 0, 'WallDurations': [9.0, 192.29563403129578, 4904.0], 'StartTimes': [1615303862.0], 'SubmitTimes': [1615303676.0], 'JobIds': ['62431221.0'], 'EndTimes': [1615308766.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'finished', 'ResidentSetSize': [1191404], 'TotalUserCpuTimeHistory': [18676], 'SiteHistory': ['Unknown', 'T2_US_Wisconsin', 'T2_US_Wisconsin'], 'TotalSysCpuTimeHistory': [182]}, '5': {'Retries': 0, 'WallDurations': [9.0, 192.29563403129578, 5373.0], 'StartTimes': [1615303862.0], 'SubmitTimes': [1615303677.0], 'JobIds': ['62431224.0'], 'EndTimes': [1615309235.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'finished', 'ResidentSetSize': [1058128], 'TotalUserCpuTimeHistory': [20557], 'SiteHistory': ['Unknown', 'T2_US_MIT', 'T2_US_MIT'], 'TotalSysCpuTimeHistory': [112]}, '4': {'Retries': 1, 'WallDurations': [8.0, 189.29563403129578, 5530.0, 9.0, 222.12879395484924, 5685.0], 'StartTimes': [1615303865.0, 1615311369.0], 'SubmitTimes': [1615303677.0, 1615311270.0], 'JobIds': ['62431223.0', '62436534.0'], 'EndTimes': [1615309395.0, 1615317054.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'finished', 'ResidentSetSize': [1286708, 1060396], 'TotalUserCpuTimeHistory': [20809, 18278], 'SiteHistory': ['Unknown', 'T2_US_UCSD', 'T2_US_UCSD', 'Unknown', 'T2_PT_NCG_Lisbon', 'T2_PT_NCG_Lisbon'], 'TotalSysCpuTimeHistory': [187, 503]}, '7': {'Retries': 0, 'WallDurations': [10.0, 190.29563403129578, 5100.0], 'StartTimes': [1615303864.0], 'SubmitTimes': [1615303682.0], 'JobIds': ['62431227.0'], 'EndTimes': [1615308964.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'finished', 'ResidentSetSize': [1189776], 'TotalUserCpuTimeHistory': [18797], 'SiteHistory': ['Unknown', 'T2_US_UCSD', 'T2_US_UCSD'], 'TotalSysCpuTimeHistory': [236]}, '6': {'Retries': 0, 'WallDurations': [9.0, 184.29563403129578, 6332.0], 'StartTimes': [1615303870.0], 'SubmitTimes': [1615303682.0], 'JobIds': ['62431225.0'], 'EndTimes': [1615310202.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'finished', 'ResidentSetSize': [1197936], 'TotalUserCpuTimeHistory': [23441], 'SiteHistory': ['Unknown', 'T2_US_Caltech', 'T2_US_Caltech'], 'TotalSysCpuTimeHistory': [427]}, '9': {'Retries': 0, 'WallDurations': [10.0, 194.29563403129578, 4806.0], 'StartTimes': [1615303860.0], 'SubmitTimes': [1615303683.0], 'JobIds': ['62431231.0'], 'EndTimes': [1615308666.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'finished', 'ResidentSetSize': [1102256], 'TotalUserCpuTimeHistory': [17818], 'SiteHistory': ['Unknown', 'T2_US_MIT', 'T2_US_MIT'], 'TotalSysCpuTimeHistory': [256]}, '20': {'Retries': 0, 'WallDurations': [8.0, 192.29563403129578, 4922.0], 'StartTimes': [1615303862.0], 'SubmitTimes': [1615303684.0], 'JobIds': ['62431253.0'], 'EndTimes': [1615308784.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'finished', 'ResidentSetSize': [1135372], 'TotalUserCpuTimeHistory': [18497], 'SiteHistory': ['Unknown', 'T2_US_MIT', 'T2_US_MIT'], 'TotalSysCpuTimeHistory': [223]}, '8': {'Retries': 0, 'WallDurations': [8.0, 191.29563403129578, 4069.0], 'StartTimes': [1615303863.0], 'SubmitTimes': [1615303683.0], 'JobIds': ['62431229.0'], 'EndTimes': [1615307932.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'finished', 'ResidentSetSize': [1131580], 'TotalUserCpuTimeHistory': [15003], 'SiteHistory': ['Unknown', 'T2_US_Purdue', 'T2_US_Purdue'], 'TotalSysCpuTimeHistory': [177]}}
+INFO 2021-03-10 17:51:32.828 UTC: 	 Status on the scheduler:	COMPLETED
+INFO 2021-03-10 17:51:32.828 UTC: 	 
+Jobs status:                    finished     		100.0% (20/20)
+INFO 2021-03-10 17:51:33.400 UTC: 	 
+Publication status of 1 dataset(s):	done         		 95.0% (19/20)
+(from CRAB internal bookkeeping in transferdb)
+					new          		  5.0% ( 1/20)
+INFO 2021-03-10 17:51:33.400 UTC: 	 
+Output dataset:			/GEN_Hpp_NEW_test/ardas-RunIISummer20UL18_SIM-128efeffab8ceb577467d0e58be013b1/USER
+Output dataset DAS URL:		https://cmsweb.cern.ch/das/request?input=%2FGEN_Hpp_NEW_test%2Fardas-RunIISummer20UL18_SIM-128efeffab8ceb577467d0e58be013b1%2FUSER&instance=prod%2Fphys03
+INFO 2021-03-10 17:51:33.401 UTC: 	 
+Warning: the max jobs runtime is less than 30% of the task requested value (1250 min), please consider to request a lower value for failed jobs (allowed through crab resubmit) and/or improve the jobs splitting (e.g. config.Data.splitting = 'Automatic') in a new task.
+INFO 2021-03-10 17:51:33.401 UTC: 	 
+Warning: the max jobs memory is less than 70% of the task requested value (4000 MB), please consider to request a lower value for failed jobs (allowed through crab resubmit) and/or improve the jobs splitting (e.g. config.Data.splitting = 'Automatic') in a new task.
+INFO 2021-03-10 17:51:33.401 UTC: 	 
+Summary of run jobs:
+ * Memory: 1084MB min, 1228MB max, 1107MB ave
+ * Runtime: 0:59:00 min, 1:54:34 max, 1:24:13 ave
+ * CPU eff: 83% min, 97% max, 94% ave
+ * Waste: 5:40:30 (17% of total)
+
+INFO 2021-03-10 17:51:33.406 UTC: 	 Log file is /uscms_data/d3/adas2/pythia-stuff/EXO-MCsampleProductions/FullSimulation/RunIISummer20UL18/SIM__CMSSW_10_6_17_patch1/src/inputs/SIM_Hplusplus_M800_13TeV_test4/crab_projects/crab_SIM_Hplusplus_M800_13TeV_test4/crab.log

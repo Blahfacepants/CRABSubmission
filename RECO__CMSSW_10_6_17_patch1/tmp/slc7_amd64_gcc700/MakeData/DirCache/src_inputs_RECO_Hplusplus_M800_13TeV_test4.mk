@@ -1,0 +1,2 @@
+ALL_PACKAGES += inputs/RECO_Hplusplus_M800_13TeV_test4
+subdirs_src_inputs_RECO_Hplusplus_M800_13TeV_test4 := 
